@@ -15,7 +15,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="scales"
-config/features=PackedStringArray("4.5", "GL Compatibility")
+config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://assets/icon.svg"
 
 [autoload]
@@ -24,6 +24,7 @@ values="*res://values.gd"
 message_bus="*res://message_bus.gd"
 global_score="*res://global_score.gd"
 decision="*res://decision.gd"
+world="*uid://d25lgdetygb7c"
 
 [rendering]
 

@@ -1,12 +1,12 @@
 decisions:
   - summary: You come across a *Very* kickable cat
-    option_a:
-      text: You kick the cat
-      values:
-        balance: +1
-    option_b:
-      text: You do not kick the cat
-      values:
-        balance: -1
-        law: +1
-        justice: -5
+	option_a:
+	  text: You kick the cat
+	  values:
+		balance: +1
+	option_b:
+	  text: You do not kick the cat
+	  values:
+		balance: -1
+		law: +1
+		justice: -5
