@@ -15,13 +15,14 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="scales"
-config/features=PackedStringArray("4.6", "GL Compatibility")
-config/icon="res://icon.svg"
+config/features=PackedStringArray("4.5", "GL Compatibility")
+config/icon="res://assets/icon.svg"
 
 [autoload]
 
 values="*res://values.gd"
 global_score="*uid://b34yrs52op2rx"
+message_bus="*res://message_bus.gd"
 
 [rendering]
 
