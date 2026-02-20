@@ -8,3 +8,5 @@ decisions:
       text: You do not kick the cat
       values:
         balance: -1
+        law: +1
+        justice: -5

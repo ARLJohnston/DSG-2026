@@ -1,0 +1,1 @@
+{"decisions":[{"option_a":{"text":"You kick the cat","values":{"balance":1}},"option_b":{"text":"You do not kick the cat","values":{"balance":-1}},"summary":"You come across a *Very* kickable cat"}]}
