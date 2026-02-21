@@ -25,8 +25,8 @@ func create_decision() -> void:
 	var a: Card = create_card(individual_decision["option_a"])
 	var b: Card = create_card(individual_decision["option_b"])
 	
-	print("a: ", a.card_values)
-	print("b: ", b.card_values)
+	#print("a: ", a.card_values)
+	#print("b: ", b.card_values)
 	# Add child to the scene
 	a.position = Vector2(250, 300)
 	b.position = Vector2(750, 300)

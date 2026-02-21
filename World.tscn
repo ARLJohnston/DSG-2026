@@ -1,3 +1,20 @@
 [gd_scene format=3 uid="uid://dgnsimb7wbd6i"]
 
+[ext_resource type="Texture2D" uid="uid://cb7s8teptapo7" path="res://assets/placeholder_dumpzone.webp" id="1_c6gwx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2dftf"]
+size = Vector2(605.1063, 619.2661)
+
 [node name="World Node" type="Node2D" unique_id=1850398273]
+
+[node name="DumpZoneSprite" type="Sprite2D" parent="." unique_id=861928100]
+position = Vector2(594.75, 564.5)
+scale = Vector2(0.28249997, 0.25833338)
+texture = ExtResource("1_c6gwx")
+
+[node name="DumpZoneArea" type="Area2D" parent="DumpZoneSprite" unique_id=65730205]
+position = Vector2(15.319122, 38.532104)
+
+[node name="DumpZoneCollision" type="CollisionShape2D" parent="DumpZoneSprite/DumpZoneArea" unique_id=253901916 groups=["draggable"]]
+position = Vector2(-6.3830566, -39.908325)
+shape = SubResource("RectangleShape2D_2dftf")
