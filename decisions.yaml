@@ -257,32 +257,29 @@ decisions:
         law: +3
     option_b:
       text: "[b]Confess[/b] to [color=red]the crime[/color]"
-      outcome: "Turns out he was a serial killer, so you are looked upon favourably."
+      outcome: "You are arrested and sentenced to 10 years in prison."
       values:
         balance: -3
         morality: +3
         justice: +1
-  - summary:
-    option_a:
-      text:
-      values:
-        truth:
-        balance:
-        order:
-        harmony:
-        law:
-        morality:
-        justice:
-    option_b:
-      text:
-      values:
-        truth:
-        balance:
-        order:
-        harmony:
-        law:
-        morality:
-        justice:
+  #- summary: "You suspect that your [color=red]friend[/color] is [b]cheating[/b] on their partner, but you have no proof"
+  #  option_a:
+  #    text: "You [b]confront[/b] your [color=red]friend[/color] about it"
+  #    outcome: "It's your word against theirs, and you aren't the most trustworthy person..."
+  #    values:
+  #      order: -2
+  #      morality: +1
+  #      justice: +2
+  #  option_b:
+  #    text: "Leave [color=red]your friend[/color] alone, this is not your problem"
+  #    values:
+  #      truth:
+  #      balance:
+  #      order:
+  #      harmony:
+  #      law:
+  #      morality:
+  #      justice:
   - summary:
     option_a:
       text:
