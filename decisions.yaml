@@ -5,7 +5,7 @@ decisions:
       text: "You [b]kick[/b] the [color=red]cat[/color]"
       outcome: "Why?"
       values:
-        balance: -1
+        order: -1
         morality: -3
     option_b:
       text: "You do not [b]kick[/b] the [color=red]cat[/color]"
@@ -38,10 +38,10 @@ decisions:
         justice: +3
     option_b: 
       text: "Report the bully to the school authorities"
-      outcome: "The school takes action, and the bullying stops."
+      outcome: "The school takes action, and the bullying stops. Why wouldn't you do this?"
       values:
         truth: +1
-        balance: -2
+        justice: -2
         morality: +2
   - summary: "You [b]see[/b] someone [color=red]tying people to a train track[/color], and a train is coming"
     option_a:
@@ -53,14 +53,16 @@ decisions:
         justice: +1
     option_b:
       text: "You [b]tie[/b] the [color=red]person[/color] to the tracks, let the train take them all"
+      outcome: "The train consumes all."
       values:
         morality: -4
         justice: +3
   - summary: "Someone [color=red]insults[/color] [b]your tie[/b] in public"
     option_a:
       text: "You [b]continue walking[/b], and ignore [color=red]the insulter[/color]"
+      outcome: "You'll be thinking about this for the next month."
       values:
-        law: +1
+        balance: +1
         harmony: +2
         justice: -3
     option_b: 
@@ -69,7 +71,7 @@ decisions:
       values:
         truth: +2
         balance: +1
-        order: -4
+        order: -2
   - summary: "You [color=red]accidentally[/color] knock over [b]the coffin[/b] at a funeral"
     option_a:
       text: "You quickly [b]pick up[/b] [color=red]the coffin[/color], and put it back in place"
@@ -79,8 +81,9 @@ decisions:
         morality: +2
     option_b:
       text: "You [b]get in[/b] [color=red]the coffin[/color], and [b]pretend[/b] to be [color=red]the deceased[/color]"
+      outcome: "A therapist would have so much fun with you."
       values:
-        order: -1
+        harmony: -1
         morality: -3
         justice: -2
   - summary: "A co-worker is [color=red]stealing[/color] from the company"
@@ -93,6 +96,7 @@ decisions:
         law: +1
     option_b:
       text: "You [b]confront[/b] [color=red]the co-worker[/color], and try to convince them to stop"
+			outcome: "Weirdly, they kept doing it, and told everyone about you. Snitch."
       values:
         truth: -1
         morality: -1
@@ -109,7 +113,7 @@ decisions:
       text: "You [b]ignore[/b] [color=red]the cheating[/color]"
       outcome: "Your fiance continues to cheat, but it's too late to do anything about it."
       values:
-        balance: -2
+        balance: -1
         order: +3
         justice: -2
   - summary: "You see a [color=red]child[/color] being [b]hit on the back[/b] by their parent"
@@ -292,3 +296,135 @@ decisions:
         harmony: +2
         morality: +3
         justice: -1
+  - summary: "[color=red]Your roommate[/color] is furious someone [b]didn't do the dishes[/b]. (You didn't do the dishes)"
+    option_a:
+      text: "You [b]admit[/b] to not doing the dishes, you really should've."
+      outcome: "Your roommate understands, however you are on dish duty for the next month."
+      values:
+        truth: +2
+        harmony: +1
+        justice: -1
+    option_b:
+      text: "[b]Gaslight[/b] [color=red]your roommate[/color], wasn't it their turn?"
+      outcome: "You won the argument, but may need to find a new roommate soon."
+      values:
+        truth: -2
+        order: +2
+        harmony: -1
+  - summary: "Your sibling is [color=red]dying[/color], and their last wish is for you to [b]kill them[/b] on their own terms."
+    option_a:
+      text: "[color=red]You[/color] grab the nearest pillow, and [b]do as they wish[/b]"
+      outcome: "A cure was found the next day, but it's too late now."
+      values: 
+        truth:  -2
+        law: -3
+        justice: +2
+    option_b:
+      text: "[color=red]You[/color] would never do [b]that[/b]"
+      outcome: "Their death was long and painful, but at least you can sleep at night."
+      values:
+        harmony: -2
+        law: 2
+        morality: -3
+  - summary: "[color=red]Reddit[/color] has [b]decided[/b] you're the asshole. How do you respond?"
+    option_a:
+      text: "Ignore it, Redditors have no power over you"
+      outcome: "Correct."
+      values:
+        truth: -1
+        harmony: +3
+        justice: -2
+    option_b:
+      text: "Fight back, there's two sides to every story"
+      outcome: "Wrong + You're an abuser. L"
+      values:
+        truth: -3
+        morality: -1
+        justice: -1
+#  - summary:
+#    option_a:
+#      text:
+#      values:
+#        truth:
+#        balance:
+#        order:
+#        harmony:
+#        law:
+#        morality:
+#        justice:
+#    option_b:
+#      text:
+#      values:
+#        truth:
+#        balance:
+#        order:
+#        harmony:
+#        law:
+#        morality:
+#        justice:
+#  - summary:
+#    option_a:
+#      text:
+#      values:
+#        truth:
+#        balance:
+#        order:
+#        harmony:
+#        law:
+#        morality:
+#        justice:
+#    option_b:
+#      text:
+#      values:
+#        truth:
+#        balance:
+#        order:
+#        harmony:
+#        law:
+#        morality:
+#        justice:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#  - summary:
+#    option_a:
+#      text:
+#      values:
+#        truth:
+#        balance:
+#        order:
+#        harmony:
+#        law:
+#        morality:
+#        justice:
+#    option_b:
+#      text:
+#      values:
+#        truth:
+#        balance:
+#        order:
+#        harmony:
+#        law:
+#        morality:
+#        justice:
