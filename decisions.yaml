@@ -6,13 +6,13 @@ decisions:
       outcome: "Why?"
       values:
         order: -1
-        morality: -3
+        morality: -1
     option_b:
       text: "You do not [b]kick[/b] the [color=red]cat[/color]"
       outcome: "The cat kicks you instead."
       values:
         harmony: +1
-        justice: +3
+        justice: +1
   - summary: "You [b]find[/b] a [color=red]lost wallet[/color] in the street, full of money"
     option_a:
       text: "You [b]take[/b] [color=red]the wallet[/color] and all it's contents"
@@ -25,7 +25,7 @@ decisions:
       text: "You [b]return[/b] [color=red]the wallet[/color] to its owner"
       outcome: "The owner is grateful, but you receive no reward."
       values:
-        justice: -2
+        justice: -1
         law: +2
         morality: +1
   - summary: "[color=red]Your daughter[/color] is being [b]bullied[/b] at school"
@@ -33,7 +33,7 @@ decisions:
       text: "[b]Kick[/b] [color=red]the bully[/color]. Hard."
       outcome: "You are reported to the school, and your daughter is now being bullied even more."
       values:
-        morality: -3
+        morality: -2
         order: -2
         justice: +3
     option_b: 
@@ -42,7 +42,7 @@ decisions:
       values:
         truth: +2
         justice: -2
-        morality: +2
+        morality: +3
   - summary: "You [b]see[/b] someone [color=red]tying people to a train track[/color], and a train is coming"
     option_a:
       text: "You [b]fight[/b] the person, and try to [color=red]save the people[/color] on the tracks"
@@ -50,13 +50,13 @@ decisions:
       values:
         order: -1
         harmony: +2
-        justice: +1
+        justice: +2
     option_b:
       text: "You [b]tie[/b] the [color=red]person[/color] to the tracks, let the train take them all"
       outcome: "The train consumes all."
       values:
-        morality: -4
-        justice: +3
+        morality: -3
+        law: -3
   - summary: "Someone [color=red]insults[/color] [b]your tie[/b] in public"
     option_a:
       text: "You [b]continue walking[/b], and ignore [color=red]the insulter[/color]"
@@ -99,7 +99,7 @@ decisions:
       outcome: "Weirdly, they kept doing it, and told everyone about you. Snitch."
       values:
         truth: -1
-        morality: -1
+        morality: 2
         justice: -1
   - summary: "Your [color=red]fiance[/color] is [b]cheating[/b] on you"
     option_a:
@@ -145,7 +145,7 @@ decisions:
       values:
         truth: -2
         law: -3
-        morality: -3
+        morality: -2
   - summary: "While on holiday, you [b]overhear[/b] a group of people discussing a [color=red]potential crime[/color]"
     option_a:
       text: "You [b]ignore[/b] [color=red]the conversation[/color]"
@@ -175,7 +175,7 @@ decisions:
       values:
         balance: +1
         order: +1
-        justice: -1
+        justice: +2
   - summary: "You [b]find[/b] a [color=red]severely injured fox[/color] on the street, barely alive"
     option_a:
       text: "You [b]help[/b] the fox, and take it to a vet"
@@ -210,9 +210,9 @@ decisions:
       text: "You [b]report[/b] the real culprit, your [color=red]son[/color]"
       outcome: "That's one way to get him out of the way."
       values:
-        justice: -2
+        justice: +2
         harmony: -2
-        morality: +2
+        morality: +1
     option_b:
       text: "You [b]take the blame[/b] for the embezzlement, and let [color=red]your son[/color] get away with it"
       outcome: "Your reputation wasn't worth that much, I guess."
@@ -271,7 +271,7 @@ decisions:
       outcome: "It's your word against theirs, and you aren't the most trustworthy person..."
       values:
         order: -2
-        morality: +1
+        morality: +2
         justice: -3
     option_b:
       text: "Leave [color=red]your friend[/color] alone, this is not your problem"
@@ -324,7 +324,7 @@ decisions:
       values:
         harmony: -2
         law: 1
-        morality: -3
+        morality: -2
   - summary: "[color=red]Reddit[/color] has [b]decided[/b] you're the asshole. How do you respond?"
     option_a:
       text: "Ignore it, Redditors have no power over you"
@@ -338,51 +338,30 @@ decisions:
       outcome: "Wrong + You're an abuser. L"
       values:
         truth: -3
-        morality: -1
+        morality: +1
         justice: -3
-#  - summary:
-#    option_a:
-#      text:
-#      values:
-#        truth:
-#        balance:
-#        order:
-#        harmony:
-#        law:
-#        morality:
-#        justice:
-#    option_b:
-#      text:
-#      values:
-#        truth:
-#        balance:
-#        order:
-#        harmony:
-#        law:
-#        morality:
-#        justice:
-#  - summary:
-#    option_a:
-#      text:
-#      values:
-#        truth:
-#        balance:
-#        order:
-#        harmony:
-#        law:
-#        morality:
-#        justice:
-#    option_b:
-#      text:
-#      values:
-#        truth:
-#        balance:
-#        order:
-#        harmony:
-#        law:
-#        morality:
-#        justice:
 
+#  - summary:
+#    option_a:
+#      text:
+#      values:
+#        truth:
+#        balance:
+#        order:
+#        harmony:
+#        law:
+#        morality:
+#        justice:
+#    option_b:
+#      text:
+#      values:
+#        truth:
+#        balance:
+#        order:
+#        harmony:
+#        law:
+#        morality:
+#        justice:
 
 
 
