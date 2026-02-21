@@ -262,42 +262,41 @@ decisions:
         balance: -3
         morality: +3
         justice: +1
-  #- summary: "You suspect that your [color=red]friend[/color] is [b]cheating[/b] on their partner, but you have no proof"
-  #  option_a:
-  #    text: "You [b]confront[/b] your [color=red]friend[/color] about it"
-  #    outcome: "It's your word against theirs, and you aren't the most trustworthy person..."
-  #    values:
-  #      order: -2
-  #      morality: +1
-  #      justice: +2
-  #  option_b:
-  #    text: "Leave [color=red]your friend[/color] alone, this is not your problem"
-  #    values:
-  #      truth:
-  #      balance:
-  #      order:
-  #      harmony:
-  #      law:
-  #      morality:
-  #      justice:
-  - summary:
+  - summary: "You suspect that your [color=red]friend[/color] is [b]cheating[/b] on their partner, but you have no proof"
     option_a:
-      text:
+      text: "You [b]confront[/b] your [color=red]friend[/color] about it"
+      outcome: "It's your word against theirs, and you aren't the most trustworthy person..."
       values:
-        truth:
-        balance:
-        order:
-        harmony:
-        law:
-        morality:
-        justice:
+        order: -2
+        morality: +1
+        justice: +2
     option_b:
-      text:
+      text: "Leave [color=red]your friend[/color] alone, this is not your problem"
+      outcome: "They remain together, but you can see behind his smile. Still, at least you didn't do anything."
+      values:
+        truth: -2
+        harmony: +3
+        law: +1
+  - summary: "You are on a [color=red]jury[/color], and [color=red]the defendant[/color] is [b]clearly guilty[/b], but you have a personal connection to them"
+    option_a:
+      text: "You must [b]vote guilty[/b], and do your duty as a [color=red]juror[/color]"
+      outcome: "He'll face the death penalty for this, you know?"
+      values:
+        truth: 
+        balance:
+        order: +2
+        harmony:
+        law: +3
+        morality:
+        justice: +1
+    option_b:
+      text: "You [b]vote not guilty[/b], and let your personal feelings get in the way of justice"
+      outcome: "Don't worry, manslaughter while drunk driving is hardly a crime, right?"
       values:
         truth:
         balance:
         order:
-        harmony:
+        harmony: +2
         law:
-        morality:
-        justice:
+        morality: +3
+        justice: -1
