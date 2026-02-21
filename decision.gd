@@ -40,7 +40,7 @@ func create_decision() -> void:
 				
 func create_card(individual_decision) -> Card:
 	# Make this instantiate, generates whole thing vs just instance of script
-	var c = card_scene.instantiate()
+	var c = card_scene.instantiate().get_node("Card")
 	var label: RichTextLabel = c.get_node("CardText")
 	label.bbcode_enabled = true
 	var card_text: String = "[color=black]"+individual_decision["text"]+"[/color]"
@@ -73,7 +73,7 @@ func create_card(individual_decision) -> Card:
 				card_text += "\n[color=black]" +stringify(score)+"⌆[/color]"
 
 	label.text = card_text
-	return c
+	return c.get_parent()
 
 func stringify(score: int) -> String:
 	if score < 0:

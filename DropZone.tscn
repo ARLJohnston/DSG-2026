@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bk8bbthhkogpe"]
+
+[ext_resource type="Texture2D" uid="uid://cb7s8teptapo7" path="res://assets/placeholder_dumpzone.webp" id="1_ev1y1"]
+[ext_resource type="Script" uid="uid://cr04g2wqjs3mp" path="res://vaccum.gd" id="2_wa0ki"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ruixv"]
+size = Vector2(605.3098, 603.87085)
+
+[node name="Node2D" type="Node2D" unique_id=257806107]
+
+[node name="DumpZoneSprite" type="Sprite2D" parent="." unique_id=945434839]
+position = Vector2(-4.000061, 2)
+scale = Vector2(0.28249997, 0.25833338)
+texture = ExtResource("1_ev1y1")
+
+[node name="DumpZoneArea" type="Area2D" parent="DumpZoneSprite" unique_id=345838746 groups=["dropzone"]]
+position = Vector2(15.319122, 38.532104)
+script = ExtResource("2_wa0ki")
+
+[node name="DumpZoneCollision" type="CollisionShape2D" parent="DumpZoneSprite/DumpZoneArea" unique_id=973713936 groups=["draggable"]]
+position = Vector2(-13.54901, -42.40307)
+shape = SubResource("RectangleShape2D_ruixv")
+script = ExtResource("2_wa0ki")

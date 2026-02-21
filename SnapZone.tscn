@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://c5dxlm1trv6gd"]
+
+[ext_resource type="Script" uid="uid://bsywdvkgl7ap6" path="res://snapzone.gd" id="1_ycp5b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5t4b5"]
+size = Vector2(51, 57)
+
+[node name="Node2D" type="Node2D" unique_id=629643760 groups=["snapzone"]]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=654390651 groups=["snapzone"]]
+script = ExtResource("1_ycp5b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=872029874]
+position = Vector2(0.5, -0.5)
+shape = SubResource("RectangleShape2D_5t4b5")
+debug_color = Color(0.60929507, 0.3965506, 0.93012065, 0.41960785)
