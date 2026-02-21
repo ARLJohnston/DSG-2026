@@ -15,6 +15,13 @@ func create_decision() -> void:
 	# TODO: once we have enough decisions, remove them after we use them :)
 	var individual_decision = json_data.pick_random()
 	
+	var label: RichTextLabel = RichTextLabel.new()
+	label.bbcode_enabled = true
+	label.size = Vector2(500,500)
+	label.text = "[color=black]"+individual_decision["summary"]+"[/color]\n"
+	add_child(label)
+
+
 	var a: Card = create_card(individual_decision["option_a"])
 	var b: Card = create_card(individual_decision["option_b"])
 	
@@ -46,21 +53,22 @@ func create_card(individual_decision) -> Card:
 				card_text += "\n[rainbow][wave amp=50 freq=2]"+stringify(score)+"↔[/wave][/rainbow]" 
 			"harmony":
 				c.card_values[Values.Maat.harmony] = score
+				card_text += "\n" +stringify(score)+"☥"
 			"justice":
 				c.card_values[Values.Maat.justice] = score
 				card_text += "\n" +stringify(score)+"❆"
 			"law":
 				c.card_values[Values.Maat.law] = score
-				card_text += "\n" +stringify(score)+"❆"
+				card_text += "\n" +stringify(score)+"⚖"
 			"morality":
 				c.card_values[Values.Maat.morality] = score
-				card_text += "\n" +stringify(score)+"❆"
+				card_text += "\n" +stringify(score)+"𓆠"
 			"order":
 				c.card_values[Values.Maat.order] = score
-				card_text += "\n" +stringify(score)+"❆"
+				card_text += "\n" +stringify(score)+"ℚ"
 			"truth":
 				c.card_values[Values.Maat.truth] = score
-				card_text += "\n" +stringify(score)+"❆"
+				card_text += "\n" +stringify(score)+"⌆"
 
 	label.text = card_text
 	return c
