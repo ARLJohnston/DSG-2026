@@ -114,19 +114,17 @@ script = ExtResource("1_c6gwx")
 script = ExtResource("2_p1v5b")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Dumpzone"]
-position = Vector2(600, 492)
+position = Vector2(0, -55)
 scale = Vector2(2.9833333, 2.983333)
 sprite_frames = SubResource("SpriteFrames_fvag4")
 animation = &"flare"
 script = ExtResource("3_eu7l1")
 
 [node name="DumpZoneArea" type="Area2D" parent="Dumpzone" groups=["dropzone"]]
-position = Vector2(599.07764, 574.4541)
 scale = Vector2(0.28249997, 0.25833338)
 script = ExtResource("1_2dftf")
 
 [node name="DumpZoneCollision" type="CollisionShape2D" parent="Dumpzone/DumpZoneArea" groups=["dropzone"]]
-position = Vector2(15.654785, -92.46802)
 shape = SubResource("RectangleShape2D_2dftf")
 
 [node name="FadeLayer" type="CanvasLayer" parent="."]
