@@ -8,6 +8,7 @@ var initial_pos: Vector2
 var reference_pos: Area2D
 var at_drop_area = false
 var dragging = false
+var outcome: String
 
 var card_values: Dictionary[Values.Maat, int] = {
 	Values.Maat.balance: 0,
@@ -24,7 +25,7 @@ func _input(event: InputEvent) -> void:
 		onChoose()
 
 func onChoose() -> void:
-	print("scoring")
+	print(self.outcome)
 	for k in card_values:
 		if card_values[k] != 0:
 			global_score.game_score[k] = card_values[k]
