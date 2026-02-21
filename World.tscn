@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://dgnsimb7wbd6i"]
+[gd_scene load_steps=21 format=3 uid="uid://dgnsimb7wbd6i"]
 
 [ext_resource type="Script" uid="uid://dvds0u2jtl5qm" path="res://dumpzone.gd" id="1_2dftf"]
 [ext_resource type="Script" uid="uid://d25lgdetygb7c" path="res://world.gd" id="1_c6gwx"]
 [ext_resource type="Texture2D" uid="uid://dbng7n5r12a3o" path="res://assets/Fire Base.png" id="2_js7pq"]
-[ext_resource type="Script" uid="uid://ct8lug8p63xj7" path="res://animated_sprite_2d.gd" id="3_eu7l1"]
+[ext_resource type="Script" uid="uid://cutgtnah3klot" path="res://dumpzone_position.gd" id="2_p1v5b"]
+[ext_resource type="Script" path="res://animated_sprite_2d.gd" id="3_eu7l1"]
 [ext_resource type="Texture2D" uid="uid://cvn42it76safw" path="res://assets/Fire Flare Up.png" id="3_p1v5b"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p1v5b"]
@@ -110,8 +111,9 @@ size = Vector2(477.87607, 724.3858)
 script = ExtResource("1_c6gwx")
 
 [node name="Dumpzone" type="Node2D" parent="." groups=["dropzone"]]
+script = ExtResource("2_p1v5b")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Dumpzone" unique_id=1656814464]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Dumpzone"]
 position = Vector2(600, 492)
 scale = Vector2(2.9833333, 2.983333)
 sprite_frames = SubResource("SpriteFrames_fvag4")
@@ -123,14 +125,14 @@ position = Vector2(599.07764, 574.4541)
 scale = Vector2(0.28249997, 0.25833338)
 script = ExtResource("1_2dftf")
 
-[node name="DumpZoneCollision" type="CollisionShape2D" parent="Dumpzone/DumpZoneArea" unique_id=253901916 groups=["dropzone"]]
+[node name="DumpZoneCollision" type="CollisionShape2D" parent="Dumpzone/DumpZoneArea" groups=["dropzone"]]
 position = Vector2(15.654785, -92.46802)
 shape = SubResource("RectangleShape2D_2dftf")
 
 [node name="FadeLayer" type="CanvasLayer" parent="."]
 layer = 100
 
-[node name="Fade" type="ColorRect" parent="FadeLayer" unique_id=181090936]
+[node name="Fade" type="ColorRect" parent="FadeLayer"]
 visible = false
 offset_left = -100.0
 offset_top = -100.0

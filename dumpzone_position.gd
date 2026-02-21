@@ -1,4 +1,4 @@
-extends Sprite2D
+extends Node2D
 
 func _ready() -> void:
 	var screenDimensions: Vector2 = get_viewport().get_visible_rect().size
