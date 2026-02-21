@@ -107,13 +107,13 @@ decisions:
       outcome: "Your fiance admits to cheating, and you break up, albeit amicably."
       values:
         truth: +3
-        order: -2
-        harmony: -3
+        order: +1
+        harmony: -1
     option_b:
       text: "You [b]ignore[/b] [color=red]the cheating[/color]"
       outcome: "Your fiance continues to cheat, but it's too late to do anything about it."
       values:
-        balance: -1
+        balance: -2
         order: +3
         justice: -2
   - summary: "You see a [color=red]child[/color] being [b]hit on the back[/b] by their parent"
