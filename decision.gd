@@ -1,6 +1,7 @@
 extends Node
 
 var json_data
+var rounds_left: int = 5
 
 var card_scene = preload("res://Card.tscn")
 
@@ -11,7 +12,17 @@ func _ready() -> void:
 	file.close()
 	
 	# Spawn cards when game starts from main menu
-	message_bus.GAME_START.connect(create_decision)
+	message_bus.GAME_START.connect(round)
+	message_bus.ROUND_END.connect(round)
+	
+func round() -> void:
+	if rounds_left <= 0:
+		message_bus.ALL_ROUNDS_DONE.emit()
+		return
+	
+	rounds_left -= 1
+	
+	create_decision()
 
 func create_decision() -> void:
 	# TODO: once we have enough decisions, remove them after we use them :)
@@ -36,8 +47,6 @@ func create_decision() -> void:
 	add_child(a)
 	add_child(b)
 
-
-				
 func create_card(individual_decision) -> Card:
 	# Make this instantiate, generates whole thing vs just instance of script
 	var c = card_scene.instantiate()
