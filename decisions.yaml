@@ -190,15 +190,89 @@ decisions:
   - summary: "You're late for work while driving, and are [b]approaching[/b] a [color=red]chicken[/color] in the road"
     option_a: 
       text: "You [b]swerve[/b] to avoid hitting the [color=red]chicken[/color]"
-			outcome: "Somehow, no one saw that move, and you get to work on time."
+      outcome: "Somehow, no one saw that move, and you get to work on time."
+      values:
+        order: +1
+        law: -1
+        morality: +2
+    option_b:
+      text: "You [b]continue forward[/b], knocking [color=red]the chicken[/color] out of the way"
+      outcome: "I guess we'll never know..."
+      values:
+        balance: -2
+        morality: -1
+        justice: +3
+  - summary: "Money is [b]embezzled[/b] from your company, and [color=red]you[/color] are the prime suspect"
+    option_a:
+      text: "You [b]report[/b] the real culprit, your [color=red]son[/color]"
+      outcome: "That's one way to get him out of the way."
+      values:
+        justice: -2
+        harmony: -2
+        morality: +1
+    option_b:
+      text: "You [b]take the blame[/b] for the embezzlement, and let [color=red]your son[/color] get away with it"
+      outcome: "Your reputation wasn't worth that much, I guess."
+      values:
+        truth: -3
+        balance: +1
+        justice: -2
+  - summary: "Your [color=red]work enemy[/color] has spinach [b]stuck[/b] in their teeth, and is about to [b]give a speech[/b]"
+    option_a:
+      text: "You point out the spinach to [color=red]your work enemy[/color] [b]prior[/b] to the speech"
+      outcome: "They are grateful, maybe they aren't so bad after all?"
+      values:
+        truth: +3
+        order: -3
+        harmony: +1
+    option_b:
+      text: "You point out the spinach to [color=red]your work enemy[/color] [b]after[/b] the speech"
+      outcome: "They are embarrassed, and never socially recover. Serves them right."
+      values:
+        balance: -3
+        harmony: -2
+        justice: +2
+  - summary: "Your [color=red]children's pet[/color][color=yellow]goldfish[/color] has a disease, and is [b]suffering[/b]"
+    option_a:
+      text: "Explain this to your children, and [b]get the goldfish put down[/b]"
+      outcome: "It doesn't feel like it now, but I'm sure they'll forgive you eventually."
+      values:
+        truth: +2
+        order: -2
+        law: -1
+    option_b:
+      text: "Leave the [color=yellow]goldfish[/color] untreated, and hope it gets better"
+      outcome: "It lasted a few more weeks, but it was a slow and painful death."
+      values:
+        balance: -2
+        harmony: +1
+        morality: -1
+  - summary: "You [b]hit and kill[/b] a [color=red]pedestrian[/color] while driving, but another woman believes she did it"
+    option_a:
+      text: "[b]Let her[/b] think [color=red]she[/color] did it"
+      outcome: "You saw her in the obituaries a few days later, that's sad."
+      values:
+        truth: -3
+        order: -3
+        law: +3
+    option_b:
+      text: "[b]Confess[/b] to [color=red]the crime[/color]"
+      outcome: "Turns out he was a serial killer, so you are looked upon favourably."
+      values:
+        balance: -3
+        morality: +3
+        justice: +1
+  - summary:
+    option_a:
+      text:
       values:
         truth:
         balance:
         order:
         harmony:
         law:
-        morality: +2
-        justice: 
+        morality:
+        justice:
     option_b:
       text:
       values:
