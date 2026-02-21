@@ -55,22 +55,22 @@ func create_card(individual_decision) -> Card:
 				card_text += "\n[rainbow][wave amp=50 freq=2]"+stringify(score)+"↔[/wave][/rainbow]" 
 			"harmony":
 				c.card_values[Values.Maat.harmony] = score
-				card_text += "\n" +stringify(score)+"☥"
+				card_text += "\n[color=black]" +stringify(score)+"☥[/color]"
 			"justice":
 				c.card_values[Values.Maat.justice] = score
-				card_text += "\n" +stringify(score)+"❆"
+				card_text += "\n[color=black]" +stringify(score)+"❆[/color]"
 			"law":
 				c.card_values[Values.Maat.law] = score
-				card_text += "\n" +stringify(score)+"⚖"
+				card_text += "\n[color=black]" +stringify(score)+"⚖[/color]"
 			"morality":
 				c.card_values[Values.Maat.morality] = score
-				card_text += "\n" +stringify(score)+"𓆠"
+				card_text += "\n[color=black]" +stringify(score)+"𓆠[/color]"
 			"order":
 				c.card_values[Values.Maat.order] = score
-				card_text += "\n" +stringify(score)+"ℚ"
+				card_text += "\n[color=black]" +stringify(score)+"ℚ[/color]"
 			"truth":
 				c.card_values[Values.Maat.truth] = score
-				card_text += "\n" +stringify(score)+"⌆"
+				card_text += "\n[color=black]" +stringify(score)+"⌆[/color]"
 
 	label.text = card_text
 	return c
