@@ -96,7 +96,7 @@ decisions:
         law: +1
     option_b:
       text: "You [b]confront[/b] [color=red]the co-worker[/color], and try to convince them to stop"
-			outcome: "Weirdly, they kept doing it, and told everyone about you. Snitch."
+      outcome: "Weirdly, they kept doing it, and told everyone about you. Snitch."
       values:
         truth: -1
         morality: -1
