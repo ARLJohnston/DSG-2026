@@ -18,6 +18,7 @@ func _ready() -> void:
 func round() -> void:
 	if rounds_left <= 0:
 		message_bus.ALL_ROUNDS_DONE.emit()
+		print(global_score.game_score)
 		return
 	
 	rounds_left -= 1
