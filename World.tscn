@@ -1,21 +1,122 @@
 [gd_scene format=3 uid="uid://dgnsimb7wbd6i"]
 
-[ext_resource type="Script" uid="uid://d25lgdetygb7c" path="res://world.gd" id="1_c6gwx"]
 [ext_resource type="Script" uid="uid://dvds0u2jtl5qm" path="res://dumpzone.gd" id="1_2dftf"]
-[ext_resource type="Texture2D" uid="uid://cb7s8teptapo7" path="res://assets/placeholder_dumpzone.webp" id="2_c6gwx"]
+[ext_resource type="Script" uid="uid://d25lgdetygb7c" path="res://world.gd" id="1_c6gwx"]
+[ext_resource type="Texture2D" uid="uid://dbng7n5r12a3o" path="res://assets/Fire Base.png" id="2_js7pq"]
+[ext_resource type="Script" uid="uid://ct8lug8p63xj7" path="res://animated_sprite_2d.gd" id="3_eu7l1"]
+[ext_resource type="Texture2D" uid="uid://cvn42it76safw" path="res://assets/Fire Flare Up.png" id="3_p1v5b"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p1v5b"]
+atlas = ExtResource("2_js7pq")
+region = Rect2(0, 0, 60, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wygdx"]
+atlas = ExtResource("2_js7pq")
+region = Rect2(60, 0, 60, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bah7m"]
+atlas = ExtResource("2_js7pq")
+region = Rect2(120, 0, 60, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fv4w7"]
+atlas = ExtResource("2_js7pq")
+region = Rect2(180, 0, 60, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fvag4"]
+atlas = ExtResource("3_p1v5b")
+region = Rect2(0, 0, 60, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kva58"]
+atlas = ExtResource("3_p1v5b")
+region = Rect2(60, 0, 60, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f5c0m"]
+atlas = ExtResource("3_p1v5b")
+region = Rect2(120, 0, 60, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b2ar6"]
+atlas = ExtResource("3_p1v5b")
+region = Rect2(180, 0, 60, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ee7l0"]
+atlas = ExtResource("3_p1v5b")
+region = Rect2(240, 0, 60, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gn8l5"]
+atlas = ExtResource("3_p1v5b")
+region = Rect2(300, 0, 60, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6w02q"]
+atlas = ExtResource("3_p1v5b")
+region = Rect2(360, 0, 60, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1fphk"]
+atlas = ExtResource("3_p1v5b")
+region = Rect2(420, 0, 60, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fvag4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p1v5b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wygdx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bah7m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fv4w7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fvag4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kva58")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f5c0m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b2ar6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ee7l0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gn8l5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6w02q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1fphk")
+}],
+"loop": false,
+"name": &"flare",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2dftf"]
-size = Vector2(810.619, 724.3858)
+size = Vector2(477.87607, 724.3858)
 
 [node name="World Node" type="Node2D" unique_id=1850398273]
 script = ExtResource("1_c6gwx")
 
 [node name="Dumpzone" type="Node2D" parent="." unique_id=1701353438 groups=["dropzone"]]
 
-[node name="DumpZoneSprite" type="Sprite2D" parent="Dumpzone" unique_id=861928100]
-position = Vector2(594.75, 564.5)
-scale = Vector2(0.28249997, 0.25833338)
-texture = ExtResource("2_c6gwx")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Dumpzone" unique_id=1656814464]
+position = Vector2(600, 492)
+scale = Vector2(2.9833333, 2.983333)
+sprite_frames = SubResource("SpriteFrames_fvag4")
+animation = &"flare"
+script = ExtResource("3_eu7l1")
 
 [node name="DumpZoneArea" type="Area2D" parent="Dumpzone" unique_id=65730205 groups=["dropzone"]]
 position = Vector2(599.07764, 574.4541)
@@ -23,13 +124,14 @@ scale = Vector2(0.28249997, 0.25833338)
 script = ExtResource("1_2dftf")
 
 [node name="DumpZoneCollision" type="CollisionShape2D" parent="Dumpzone/DumpZoneArea" unique_id=253901916 groups=["dropzone"]]
-position = Vector2(8.574951, -92.46802)
+position = Vector2(15.654785, -92.46802)
 shape = SubResource("RectangleShape2D_2dftf")
 
 [node name="FadeLayer" type="CanvasLayer" parent="." unique_id=2085358221]
 layer = 100
 
 [node name="Fade" type="ColorRect" parent="FadeLayer" unique_id=181090936]
+visible = false
 offset_left = -100.0
 offset_top = -100.0
 offset_right = 39900.0
