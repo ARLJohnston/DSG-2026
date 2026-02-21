@@ -32,30 +32,40 @@ func create_decision() -> void:
 func create_card(individual_decision) -> Card:
 	# Make this instantiate, generates whole thing vs just instance of script
 	var c = card_scene.instantiate()
-	var label = Label.new()
-	label.text = individual_decision["text"]
-	label.add_theme_color_override("font_color", Color())
+	var label: RichTextLabel = c.get_node("CardText")
+	label.bbcode_enabled = true
+	var card_text: String = "[color=black]"+individual_decision["text"]+"[/color]"
 	
-	label.set_position(Vector2(0,50))
-	
-	# Add to card_scene instead so it's visible
-	c.add_child(label)
 	var decision_values = individual_decision["values"] as Dictionary[String, int]
 	for value in decision_values.keys():
 		var score: int = decision_values[value]
+		
 		match value:
 			"balance":
 				c.card_values[Values.Maat.balance] = score
+				card_text += "\n[rainbow][wave amp=50 freq=2]"+stringify(score)+"↔[/wave][/rainbow]" 
 			"harmony":
 				c.card_values[Values.Maat.harmony] = score
 			"justice":
 				c.card_values[Values.Maat.justice] = score
+				card_text += "\n" +stringify(score)+"❆"
 			"law":
 				c.card_values[Values.Maat.law] = score
+				card_text += "\n" +stringify(score)+"❆"
 			"morality":
 				c.card_values[Values.Maat.morality] = score
+				card_text += "\n" +stringify(score)+"❆"
 			"order":
 				c.card_values[Values.Maat.order] = score
+				card_text += "\n" +stringify(score)+"❆"
 			"truth":
 				c.card_values[Values.Maat.truth] = score
+				card_text += "\n" +stringify(score)+"❆"
+
+	label.text = card_text
 	return c
+
+func stringify(score: int) -> String:
+	if score < 0:
+		return str(score)
+	return "+" + str(score)
