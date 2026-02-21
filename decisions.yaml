@@ -158,7 +158,7 @@ decisions:
       text: "You attempt to [b]report[/b] [color=red]the potential crime[/color] to the police"
       outcome: "You never hear back, however you don't feel safe for the rest of your stay."
       values:
-        balance: -3
+        balance: -1
         law: +1
         morality: +2
   - summary: "Your [color=red]negligent father[/color] is dying and needs a [b]kidney transplant[/b]"
@@ -182,8 +182,8 @@ decisions:
       outcome: "The fox is saved, but you are stuck with the bill."
       values:
         truth: +2
-        balance: -3
-        morality: +2
+        balance: +1
+        morality: -1
     option_b: 
       text: "You [b]end[/b] [color=red]the fox[/color]'s suffering"
       outcome: "It was barely alive, so it was probably the right thing to do."
@@ -233,7 +233,7 @@ decisions:
       text: "You point out the spinach to [color=red]your work enemy[/color] [b]after[/b] the speech"
       outcome: "They are embarrassed, and never socially recover. Serves them right."
       values:
-        balance: -3
+        balance: +1
         harmony: -2
         justice: +2
   - summary: "Your [color=red]children's pet[/color][color=yellow]goldfish[/color] has a disease, and is [b]suffering[/b]"
@@ -243,7 +243,7 @@ decisions:
       values:
         truth: +2
         order: -2
-        law: -1
+        balance: +1
     option_b:
       text: "Leave the [color=yellow]goldfish[/color] untreated, and hope it gets better"
       outcome: "It lasted a few more weeks, but it was a slow and painful death."
@@ -263,7 +263,7 @@ decisions:
       text: "[b]Confess[/b] to [color=red]the crime[/color]"
       outcome: "You are arrested and sentenced to 10 years in prison."
       values:
-        balance: -3
+        balance: -2
         morality: +3
         justice: +1
   - summary: "You suspect that your [color=red]friend[/color] is [b]cheating[/b] on their partner, but you have no proof"
@@ -279,8 +279,8 @@ decisions:
       outcome: "They remain together, but you can see behind his smile. Still, at least you didn't do anything."
       values:
         truth: -2
-        harmony: +3
-        law: +1
+        harmony: -2
+        balance: +2
   - summary: "You are on a [color=red]jury[/color], and [color=red]the defendant[/color] is [b]clearly guilty[/b], but you have a personal connection to them"
     option_a:
       text: "You must [b]vote guilty[/b], and do your duty as a [color=red]juror[/color]"
@@ -293,7 +293,7 @@ decisions:
       text: "You [b]vote not guilty[/b], and let your personal feelings get in the way of justice"
       outcome: "Don't worry, manslaughter while drunk driving is hardly a crime, right?"
       values:
-        harmony: +2
+        balance: +2
         morality: +3
         justice: -1
   - summary: "[color=red]Your roommate[/color] is furious someone [b]didn't do the dishes[/b]. (You didn't do the dishes)"
