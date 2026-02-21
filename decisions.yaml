@@ -114,7 +114,7 @@ decisions:
       outcome: "Your fiance continues to cheat, but it's too late to do anything about it."
       values:
         balance: -2
-        order: +
+        order: +2
         justice: -2
   - summary: "You see a [color=red]child[/color] being [b]hit on the back[/b] by their parent"
     option_a:
