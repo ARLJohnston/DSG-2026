@@ -1,16 +1,6 @@
 extends Node
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
-
 func _on_button_pressed() -> void:
 	var fade_out_background_music = create_tween()
 	fade_out_background_music.tween_property($BackgroundMusic, "volume_db", -20.0, 1)

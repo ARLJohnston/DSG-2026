@@ -15,5 +15,3 @@ dest_files=["res://decisions.option.translation", "res://decisions.option.transl
 
 compress=1
 delimiter=0
-unescape_keys=false
-unescape_translations=true

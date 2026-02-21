@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dgnsimb7wbd6i"]
+[gd_scene load_steps=6 format=3 uid="uid://dgnsimb7wbd6i"]
 
 [ext_resource type="Script" uid="uid://dvds0u2jtl5qm" path="res://dumpzone.gd" id="1_2dftf"]
 [ext_resource type="Script" uid="uid://d25lgdetygb7c" path="res://world.gd" id="1_c6gwx"]
@@ -106,10 +106,10 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2dftf"]
 size = Vector2(477.87607, 724.3858)
 
-[node name="World Node" type="Node2D" unique_id=1850398273]
+[node name="World Node" type="Node2D"]
 script = ExtResource("1_c6gwx")
 
-[node name="Dumpzone" type="Node2D" parent="." unique_id=1701353438 groups=["dropzone"]]
+[node name="Dumpzone" type="Node2D" parent="." groups=["dropzone"]]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Dumpzone" unique_id=1656814464]
 position = Vector2(600, 492)
@@ -118,7 +118,7 @@ sprite_frames = SubResource("SpriteFrames_fvag4")
 animation = &"flare"
 script = ExtResource("3_eu7l1")
 
-[node name="DumpZoneArea" type="Area2D" parent="Dumpzone" unique_id=65730205 groups=["dropzone"]]
+[node name="DumpZoneArea" type="Area2D" parent="Dumpzone" groups=["dropzone"]]
 position = Vector2(599.07764, 574.4541)
 scale = Vector2(0.28249997, 0.25833338)
 script = ExtResource("1_2dftf")
@@ -127,7 +127,7 @@ script = ExtResource("1_2dftf")
 position = Vector2(15.654785, -92.46802)
 shape = SubResource("RectangleShape2D_2dftf")
 
-[node name="FadeLayer" type="CanvasLayer" parent="." unique_id=2085358221]
+[node name="FadeLayer" type="CanvasLayer" parent="."]
 layer = 100
 
 [node name="Fade" type="ColorRect" parent="FadeLayer" unique_id=181090936]
