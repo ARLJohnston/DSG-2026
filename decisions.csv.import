@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://cd7yyh8wtflkq"
+
+[deps]
+
+files=["res://decisions.option.translation", "res://decisions.option.translation", "res://decisions.option.translation", "res://decisions.option.translation", "res://decisions.option.translation", "res://decisions.option.translation", "res://decisions.option.translation", "res://decisions.option.translation", "res://decisions.option.translation", "res://decisions.option.translation", "res://decisions.option.translation", "res://decisions.option.translation", "res://decisions.option.translation", "res://decisions.option.translation", "res://decisions.option.translation", "res://decisions.option.translation"]
+
+source_file="res://decisions.csv"
+dest_files=["res://decisions.option.translation", "res://decisions.option.translation", "res://decisions.option.translation", "res://decisions.option.translation", "res://decisions.option.translation", "res://decisions.option.translation", "res://decisions.option.translation", "res://decisions.option.translation", "res://decisions.option.translation", "res://decisions.option.translation", "res://decisions.option.translation", "res://decisions.option.translation", "res://decisions.option.translation", "res://decisions.option.translation", "res://decisions.option.translation", "res://decisions.option.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true

@@ -1,19 +1,21 @@
 [gd_scene format=3 uid="uid://dgnsimb7wbd6i"]
 
+[ext_resource type="Script" uid="uid://d25lgdetygb7c" path="res://world.gd" id="1_c6gwx"]
 [ext_resource type="Script" uid="uid://dvds0u2jtl5qm" path="res://dumpzone.gd" id="1_2dftf"]
-[ext_resource type="Texture2D" uid="uid://cb7s8teptapo7" path="res://assets/placeholder_dumpzone.webp" id="1_c6gwx"]
+[ext_resource type="Texture2D" uid="uid://cb7s8teptapo7" path="res://assets/placeholder_dumpzone.webp" id="2_c6gwx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2dftf"]
 size = Vector2(810.619, 724.3858)
 
 [node name="World Node" type="Node2D" unique_id=1850398273]
+script = ExtResource("1_c6gwx")
 
 [node name="Dumpzone" type="Node2D" parent="." unique_id=1701353438 groups=["dropzone"]]
 
 [node name="DumpZoneSprite" type="Sprite2D" parent="Dumpzone" unique_id=861928100]
 position = Vector2(594.75, 564.5)
 scale = Vector2(0.28249997, 0.25833338)
-texture = ExtResource("1_c6gwx")
+texture = ExtResource("2_c6gwx")
 
 [node name="DumpZoneArea" type="Area2D" parent="Dumpzone" unique_id=65730205 groups=["dropzone"]]
 position = Vector2(599.07764, 574.4541)
@@ -23,6 +25,16 @@ script = ExtResource("1_2dftf")
 [node name="DumpZoneCollision" type="CollisionShape2D" parent="Dumpzone/DumpZoneArea" unique_id=253901916 groups=["dropzone"]]
 position = Vector2(8.574951, -92.46802)
 shape = SubResource("RectangleShape2D_2dftf")
+
+[node name="FadeLayer" type="CanvasLayer" parent="." unique_id=2085358221]
+layer = 100
+
+[node name="Fade" type="ColorRect" parent="FadeLayer" unique_id=181090936]
+offset_left = -100.0
+offset_top = -100.0
+offset_right = 39900.0
+offset_bottom = 39900.0
+color = Color(0, 0, 0, 1)
 
 [connection signal="area_entered" from="Dumpzone/DumpZoneArea" to="Dumpzone/DumpZoneArea" method="_on_area_entered"]
 [connection signal="area_exited" from="Dumpzone/DumpZoneArea" to="Dumpzone/DumpZoneArea" method="_on_area_exited"]

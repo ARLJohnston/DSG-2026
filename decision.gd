@@ -34,7 +34,6 @@ func create_decision() -> void:
 	label.text = "[color=black]"+individual_decision["summary"]+"[/color]\n"
 	add_child(label)
 
-
 	var a: Card = create_card(individual_decision["option_a"])
 	var b: Card = create_card(individual_decision["option_b"])
 	
