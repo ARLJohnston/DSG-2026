@@ -282,21 +282,13 @@ decisions:
       text: "You must [b]vote guilty[/b], and do your duty as a [color=red]juror[/color]"
       outcome: "He'll face the death penalty for this, you know?"
       values:
-        truth: 
-        balance:
         order: +2
-        harmony:
         law: +3
-        morality:
         justice: +1
     option_b:
       text: "You [b]vote not guilty[/b], and let your personal feelings get in the way of justice"
       outcome: "Don't worry, manslaughter while drunk driving is hardly a crime, right?"
       values:
-        truth:
-        balance:
-        order:
         harmony: +2
-        law:
         morality: +3
         justice: -1
