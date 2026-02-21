@@ -26,10 +26,13 @@ global_score="*res://global_score.gd"
 message_bus="*res://message_bus.gd"
 world="*res://world.gd"
 decision="*res://decision.gd"
+snapzone="*uid://bsywdvkgl7ap6"
 
 [global_group]
 
 draggable="Draggable objects"
+snapzone=""
+dropzone=""
 
 [rendering]
 

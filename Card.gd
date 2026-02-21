@@ -20,7 +20,6 @@ var card_values: Dictionary[Values.Maat, int] = {
 }
 
 func onChoose() -> void:
-	var m = Values.new()
 	for k in card_values:
 		if card_values[k] != 0:
 			global_score.game_score[k] = card_values[k]
