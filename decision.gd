@@ -9,7 +9,9 @@ func _ready() -> void:
 	var json_text = file.get_as_text()
 	json_data = JSON.parse_string(json_text)["decisions"]
 	file.close()
-	create_decision()
+	
+	# Spawn cards when game starts from main menu
+	message_bus.GAME_START.connect(create_decision)
 
 func create_decision() -> void:
 	# TODO: once we have enough decisions, remove them after we use them :)
@@ -77,3 +79,5 @@ func stringify(score: int) -> String:
 	if score < 0:
 		return str(score)
 	return "+" + str(score)
+
+# Listeners

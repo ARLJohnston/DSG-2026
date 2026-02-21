@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://cttk7ufnjvvp6"]
+
+[ext_resource type="Script" uid="uid://df2fi3mh2kaah" path="res://main_menu.gd" id="1_i26rj"]
+[ext_resource type="AudioStream" uid="uid://cpsmjdbnwydw2" path="res://assets/audio/music/IntroAmbientBoring.mp3" id="2_eiy7p"]
+[ext_resource type="AudioStream" uid="uid://jo3qo8a0j6ka" path="res://assets/audio/soundeffects/menuMove2.wav" id="3_h7a2f"]
+
+[node name="Main Menu" type="Node2D" unique_id=695990576]
+position = Vector2(529, 329)
+script = ExtResource("1_i26rj")
+
+[node name="Button" type="Button" parent="." unique_id=667101538]
+offset_left = -19.0
+offset_top = -27.0
+offset_right = 88.0
+offset_bottom = 27.0
+text = "BUTTON
+(tim)"
+script = ExtResource("1_i26rj")
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="." unique_id=1561736097]
+stream = ExtResource("2_eiy7p")
+volume_db = 0.912
+autoplay = true
+
+[node name="HoverNoise" type="AudioStreamPlayer" parent="." unique_id=1471755540]
+stream = ExtResource("3_h7a2f")
+
+[connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
