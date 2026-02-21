@@ -15,6 +15,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="scales"
+run/main_scene="res://Card.tscn"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://assets/icon.svg"
 
@@ -23,8 +24,7 @@ config/icon="res://assets/icon.svg"
 values="*res://values.gd"
 global_score="*res://global_score.gd"
 message_bus="*res://message_bus.gd"
-world="*uid://d25lgdetygb7c"
-<<<<<<<Updatedupstreamglobal_score="*res://global_score.gd"
+world="*res://world.gd"
 decision="*res://decision.gd"
 
 [global_group]
