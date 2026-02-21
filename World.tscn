@@ -4,21 +4,25 @@
 [ext_resource type="Texture2D" uid="uid://cb7s8teptapo7" path="res://assets/placeholder_dumpzone.webp" id="1_c6gwx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2dftf"]
-size = Vector2(605.1063, 619.2661)
+size = Vector2(810.619, 724.3858)
 
 [node name="World Node" type="Node2D" unique_id=1850398273]
 
-[node name="Dumpzone" type="Node2D" parent="." unique_id=1701353438]
+[node name="Dumpzone" type="Node2D" parent="." unique_id=1701353438 groups=["dropzone"]]
 
-[node name="DumpZoneArea" type="Area2D" parent="Dumpzone" unique_id=65730205]
+[node name="DumpZoneSprite" type="Sprite2D" parent="Dumpzone" unique_id=861928100]
+position = Vector2(594.75, 564.5)
+scale = Vector2(0.28249997, 0.25833338)
+texture = ExtResource("1_c6gwx")
+
+[node name="DumpZoneArea" type="Area2D" parent="Dumpzone" unique_id=65730205 groups=["dropzone"]]
 position = Vector2(599.07764, 574.4541)
 scale = Vector2(0.28249997, 0.25833338)
 script = ExtResource("1_2dftf")
 
-[node name="DumpZoneCollision" type="CollisionShape2D" parent="Dumpzone/DumpZoneArea" unique_id=253901916 groups=["draggable"]]
-position = Vector2(-6.3830566, -39.908325)
+[node name="DumpZoneCollision" type="CollisionShape2D" parent="Dumpzone/DumpZoneArea" unique_id=253901916 groups=["dropzone"]]
+position = Vector2(8.574951, -92.46802)
 shape = SubResource("RectangleShape2D_2dftf")
 
-[node name="DumpZoneSprite" type="Sprite2D" parent="Dumpzone/DumpZoneArea" unique_id=861928100 groups=["dropzone"]]
-position = Vector2(-15.319092, -38.531982)
-texture = ExtResource("1_c6gwx")
+[connection signal="area_entered" from="Dumpzone/DumpZoneArea" to="Dumpzone/DumpZoneArea" method="_on_area_entered"]
+[connection signal="area_exited" from="Dumpzone/DumpZoneArea" to="Dumpzone/DumpZoneArea" method="_on_area_exited"]

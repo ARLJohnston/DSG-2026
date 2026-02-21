@@ -5,7 +5,7 @@ class_name Card
 
 var offset: Vector2
 var initial_pos: Vector2
-var reference_pos: StaticBody2D
+var reference_pos: Area2D
 var at_drop_area = false
 var dragging = false
 
@@ -25,13 +25,14 @@ func onChoose() -> void:
 			global_score.game_score[k] = card_values[k]
 	message_bus.ROUND_END.emit()
 
-func _on_area_2d_body_entered(body:StaticBody2D) -> void:
-	if body.is_in_group("droppable"):
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	if area.is_in_group("dropzone"):
 		at_drop_area = true
-		reference_pos = body
+		reference_pos = area
 		print("in drop area")
-		
-func _on_area_2d_body_exited(body):
-	if body.is_in_group("droppable"):
+
+
+func _on_area_2d_area_exited(area: Area2D) -> void:
+	if area.is_in_group("dropzone"):
 		at_drop_area = false
 		print("out of drop area")
