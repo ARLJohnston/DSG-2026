@@ -11,7 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://cyvrs7ooxb778" path="res://assets/Feather Scale.png" id="4_f5c0m"]
 [ext_resource type="Texture2D" uid="uid://bqr0e8hfh0yvn" path="res://assets/Heart Scale.png" id="5_b2ar6"]
 [ext_resource type="Texture2D" uid="uid://ctytopjyjexd3" path="res://assets/Scale Bar.png" id="6_ee7l0"]
-[ext_resource type="Texture2D" uid="uid://iju384pxboob" path="res://assets/Description Card.png" id="12_f5c0m"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p1v5b"]
 atlas = ExtResource("2_js7pq")
@@ -174,11 +173,7 @@ position = Vector2(950.99994, 337.00003)
 scale = Vector2(2.2499998, 2.2499998)
 texture = ExtResource("5_b2ar6")
 
-[node name="DescriptionCard" type="Sprite2D" parent="." unique_id=498890218]
-z_index = -1
-position = Vector2(582, 231)
-scale = Vector2(4.714286, 2.3200002)
-texture = ExtResource("12_f5c0m")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1629240805]
 
 [connection signal="area_entered" from="Dumpzone/DumpZoneArea" to="Dumpzone/DumpZoneArea" method="_on_area_entered"]
 [connection signal="area_exited" from="Dumpzone/DumpZoneArea" to="Dumpzone/DumpZoneArea" method="_on_area_exited"]

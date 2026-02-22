@@ -40,9 +40,9 @@ func create_decision() -> void:
 	label.add_theme_font_override("bold_font", anubis)
 	label.bbcode_enabled = true
 	label.size = Vector2(screenDimensions.x,1000)
-	label.position += Vector2(0,0.1*screenDimensions.y)
+	label.position += Vector2(0,0.2*screenDimensions.y)
 	label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	label.text = "[color=black]"+individual_decision["summary"]+"[/color]"
+	label.text = "[color=white]"+individual_decision["summary"]+"[/color]"
 	add_child(label)
 
 	var a: Card = create_card(individual_decision["option_a"])
