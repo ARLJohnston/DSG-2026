@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cttk7ufnjvvp6"]
+[gd_scene format=3 uid="uid://cttk7ufnjvvp6"]
 
 [ext_resource type="Script" uid="uid://df2fi3mh2kaah" path="res://main_menu.gd" id="1_i26rj"]
 [ext_resource type="AudioStream" uid="uid://cpsmjdbnwydw2" path="res://assets/audio/music/IntroAmbientBoring.mp3" id="2_eiy7p"]
@@ -6,7 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://teo10lsqs18g" path="res://assets/Background Block Colour 260026.png" id="4_cqjrg"]
 [ext_resource type="AudioStream" uid="uid://c8kstv88bpsbn" path="res://assets/audio/music/InterestingAudio2.mp3" id="5_e2xy7"]
 [ext_resource type="Texture2D" uid="uid://dntbqev65cubf" path="res://assets/Background Void Spritesheet Transparent.png" id="6_fimr5"]
-[ext_resource type="Script" uid="uid://is3oma8hricm" path="res://Nebula.gd" id="7_u7cqb"]
+[ext_resource type="Script" uid="uid://bj4oonpnvxu0r" path="res://Nebula.gd" id="7_u7cqb"]
+[ext_resource type="Texture2D" uid="uid://wfvpoihsni6q" path="res://assets/Anubis.png" id="8_e2xy7"]
 
 [sub_resource type="GDScript" id="GDScript_cqjrg"]
 script/source = "extends Sprite2D
@@ -70,27 +71,27 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Main Menu" type="Node2D"]
+[node name="Main Menu" type="Node2D" unique_id=1424249475]
 position = Vector2(529, 329)
 script = ExtResource("1_i26rj")
 
-[node name="Button" type="Button" parent="."]
+[node name="Button" type="Button" parent="." unique_id=1365020170]
 offset_left = -19.0
 offset_top = -27.0
 offset_right = 88.0
 offset_bottom = 27.0
-text = "Play Game"
+text = "Face Judgement"
 script = ExtResource("1_i26rj")
 
-[node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="." unique_id=1880305984]
 stream = ExtResource("2_eiy7p")
 volume_db = 7.298
 autoplay = true
 
-[node name="HoverNoise" type="AudioStreamPlayer" parent="."]
+[node name="HoverNoise" type="AudioStreamPlayer" parent="." unique_id=625778438]
 stream = ExtResource("3_h7a2f")
 
-[node name="FadeOut" type="ColorRect" parent="."]
+[node name="FadeOut" type="ColorRect" parent="." unique_id=1179222149]
 visible = false
 offset_left = -1000.0
 offset_top = -1000.0
@@ -98,23 +99,29 @@ offset_right = 39000.0
 offset_bottom = 39000.0
 color = Color(0, 0, 0, 0)
 
-[node name="BackgroundBlockColour260026" type="Sprite2D" parent="."]
+[node name="BackgroundBlockColour260026" type="Sprite2D" parent="." unique_id=636342998]
 z_index = -3
 position = Vector2(63.37494, 12.2500305)
 scale = Vector2(6.8460937, 5.2604165)
 texture = ExtResource("4_cqjrg")
 script = SubResource("GDScript_cqjrg")
 
-[node name="Background Music" type="AudioStreamPlayer" parent="BackgroundBlockColour260026"]
+[node name="Background Music" type="AudioStreamPlayer" parent="BackgroundBlockColour260026" unique_id=350133688]
 stream = ExtResource("5_e2xy7")
 autoplay = true
 parameters/looping = false
 
-[node name="Nebula" type="AnimatedSprite2D" parent="BackgroundBlockColour260026"]
+[node name="Nebula" type="AnimatedSprite2D" parent="BackgroundBlockColour260026" unique_id=301614339]
 position = Vector2(-158.20302, -121.11628)
 scale = Vector2(0.2764579, 0.37209302)
 sprite_frames = SubResource("SpriteFrames_e2xy7")
 script = ExtResource("7_u7cqb")
+
+[node name="Anubis" type="Sprite2D" parent="." unique_id=2044407947]
+z_index = -1
+position = Vector2(47, -45)
+scale = Vector2(3.05625, 3.05625)
+texture = ExtResource("8_e2xy7")
 
 [connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
