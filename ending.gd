@@ -2,17 +2,17 @@ extends Node2D
 	
 var anubis: Font
 
-func end():
+func _ready() -> void:
 	# Do some calculations [bbtext]
 	
 	var score = global_score.game_score
-	var truth = score[Values.Maat.truth]
-	var balance =  score[Values.Maat.balance]
-	var order = score[Values.Maat.order]
-	var harmony = score[Values.Maat.harmony]
-	var law = score[Values.Maat.law]
-	var morality = score[Values.Maat.morality]
-	var justice = score[Values.Maat.justice]
+	var truth = score.get(Values.Maat.truth, 0)
+	var balance =  score.get(Values.Maat.balance,0)
+	var order = score.get(Values.Maat.order, 0)
+	var harmony = score.get(Values.Maat.harmony, 0)
+	var law = score.get(Values.Maat.law, 0)
+	var morality = score.get(Values.Maat.morality, 0)
+	var justice = score.get(Values.Maat.justice, 0)
 	
 	var qualified_endings : Dictionary[int,String] = {
 		0 : "You lived a life upholding the letter of the law, yet it betrays you in the end....",
@@ -23,7 +23,7 @@ func end():
 		5 : "You lived a life without regard for the rules yet you always chased fulfillment...",
 		6 : "You lived a selfish life and so, you are alone...",
 		7 : "You upheld the spirit of the law even if you had to break it a few times...",
-		8 : "Your actions were deemed insignificant, you will be forgotten by the sands of time...",
+		8 : "Your actions were deemed insignificant, [fade]you will be forgotten by the sands of time...[/fade]",
 		9 : "Your actions were deemed exceptional. You have been granted entry into the Fields of Aaru...",
 		10: "You were judged unworthy. Your heart has been devoured by Ammit, never to be reborn again...",
 	}
@@ -45,14 +45,19 @@ func end():
 		elif sum_val < -1: ending_text = qualified_endings[10]
 		elif sum_val > 1: ending_text = qualified_endings[9]
 	
+	print(ending_text)
 	var vp: Vector2 = get_viewport().get_visible_rect().size
 	var fadedMessage = RichTextLabel.new()
 	anubis = load("res://assets/fonts/anubis-mythical-font/Anubismythicalserif-lxdLy.otf")
 	fadedMessage.add_theme_font_override("normal_font", anubis)
 	fadedMessage.add_theme_font_override("bold_font", anubis)
 	fadedMessage.bbcode_enabled = true
+	fadedMessage.size = Vector2(vp.x,1000)
 	fadedMessage.text = "[color=white]" + ending_text + "[/color]"
+	fadedMessage.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	fadedMessage.custom_minimum_size = Vector2(300, 100)
+	fadedMessage.z_index = 1
+	fadedMessage.z_as_relative = false
 	fadedMessage.position = (vp / 2) - (fadedMessage.custom_minimum_size / 2)
 	add_child(fadedMessage)
 

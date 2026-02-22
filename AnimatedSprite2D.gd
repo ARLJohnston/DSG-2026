@@ -8,8 +8,9 @@ func _ready() -> void:
 	message_bus.ROUND_END.connect(flare)
 	
 func flare() -> void:
-	animated_sprite_2d.play("flare")
-	$FireConsume.play()
-	await get_tree().create_timer(1.6).timeout
-	$FireConsume.stop()
-	animated_sprite_2d.play("default")
+	if get_tree():
+		animated_sprite_2d.play("flare")
+		$FireConsume.play()
+		await get_tree().create_timer(1.6).timeout
+		$FireConsume.stop()
+		animated_sprite_2d.play("default")

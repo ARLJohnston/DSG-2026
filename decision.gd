@@ -18,10 +18,11 @@ func _ready() -> void:
 	message_bus.ROUND_END.connect(round)
 	
 func round() -> void:
-	label.queue_free()
+	if label:
+		label.queue_free()
 	if rounds_left <= 0:
 		message_bus.ALL_ROUNDS_DONE.emit()
-		print(global_score.game_score)
+		rounds_left = 5
 		return
 	
 	rounds_left -= 1
