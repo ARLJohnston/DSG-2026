@@ -35,6 +35,7 @@ func onChoose() -> void:
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.is_in_group("dropzone"):
+		$Area2D/Pickup.play()
 		at_drop_area = true
 		reference_pos = area
 		print("in drop area")
@@ -42,5 +43,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 
 func _on_area_2d_area_exited(area: Area2D) -> void:
 	if area.is_in_group("dropzone"):
+		var fade_out_background_music = create_tween()
+		fade_out_background_music.tween_property($Area2D/Pickup, "volume_db", -20.0, 1)
 		at_drop_area = false
 		print("out of drop area")

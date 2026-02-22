@@ -18,7 +18,7 @@ script = ExtResource("1_i26rj")
 
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="." unique_id=798507932]
 stream = ExtResource("2_eiy7p")
-volume_db = 0.912
+volume_db = 7.298
 autoplay = true
 
 [node name="HoverNoise" type="AudioStreamPlayer" parent="." unique_id=1236516370]

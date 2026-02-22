@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://kil0r2bm7nqt" path="res://card_dragging.gd" id="3_3ujke"]
 [ext_resource type="Script" uid="uid://bsywdvkgl7ap6" path="res://snapzone.gd" id="4_3ujke"]
 [ext_resource type="FontFile" uid="uid://cfa0lwhwsan1j" path="res://assets/fonts/anubis-mythical-font/Anubismythicalserif-lxdLy.otf" id="4_8ekg7"]
+[ext_resource type="AudioStream" uid="uid://t7big7nrnag6" path="res://assets/audio/soundeffects/pickup2.wav" id="6_w7jam"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3ujke"]
 size = Vector2(178, 280)
@@ -44,6 +45,11 @@ position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_3ujke")
 debug_color = Color(0, 0.6, 0.69803923, 0.91764706)
 
+[node name="Pickup" type="AudioStreamPlayer" parent="Card/Area2D" unique_id=1040208296]
+stream = ExtResource("6_w7jam")
+volume_db = 5.474
+pitch_scale = 0.01
+
 [node name="Area2D2" type="Area2D" parent="." unique_id=1940060665 groups=["snapzone"]]
 script = ExtResource("4_3ujke")
 
@@ -52,5 +58,6 @@ position = Vector2(0.5, -0.5)
 shape = SubResource("RectangleShape2D_wi8ie")
 debug_color = Color(0.60929507, 0.3965506, 0.93012065, 0.41960785)
 
+[connection signal="area_entered" from="Card/Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="Card/Area2D" to="Card" method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Card/Area2D" to="Card" method="_on_area_2d_area_exited"]
