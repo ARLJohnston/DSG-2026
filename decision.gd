@@ -1,7 +1,7 @@
 extends Node
 
 var json_data
-var rounds_left: int = 5
+var rounds_left: int = 20
 
 var card_scene = preload("res://Card.tscn")
 var anubis: Font
@@ -22,7 +22,7 @@ func round() -> void:
 		label.queue_free()
 	if rounds_left <= 0:
 		message_bus.ALL_ROUNDS_DONE.emit()
-		rounds_left = 5
+		rounds_left = 20
 		return
 	
 	rounds_left -= 1
