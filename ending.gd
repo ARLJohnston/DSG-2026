@@ -58,7 +58,7 @@ func _ready() -> void:
 	fadedMessage.custom_minimum_size = Vector2(300, 100)
 	fadedMessage.z_index = 1
 	fadedMessage.z_as_relative = false
-	fadedMessage.position = (vp / 2) - (fadedMessage.custom_minimum_size / 2)
+	fadedMessage.position += Vector2(0,0.2*vp.y)
 	add_child(fadedMessage)
 
 func _input(event: InputEvent) -> void:
