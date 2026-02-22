@@ -10,6 +10,7 @@ var at_drop_area = false
 var dragging = false
 var outcome: String
 
+
 var card_values: Dictionary[Values.Maat, int] = {
 	Values.Maat.balance: 0,
  	Values.Maat.harmony: 0,

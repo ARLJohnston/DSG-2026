@@ -1,6 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://bb1m5bmtt2exy"]
+[gd_scene format=3 uid="uid://bb1m5bmtt2exy"]
 
-[ext_resource type="Script" uid="uid://drfg2laj2b7xb" path="res://Card.gd" id="1_3ujke"]
+[ext_resource type="Script" uid="uid://cyn4fk5p3fxkj" path="res://Card.gd" id="1_3ujke"]
 [ext_resource type="Texture2D" uid="uid://ta7kiyksc0up" path="res://assets/placeholder_card.png" id="1_dd2wi"]
 [ext_resource type="Script" uid="uid://bft5i4g2bge2t" path="res://card_scene.gd" id="1_wi8ie"]
 [ext_resource type="Script" uid="uid://kil0r2bm7nqt" path="res://card_dragging.gd" id="3_3ujke"]
@@ -13,17 +13,17 @@ size = Vector2(178, 280)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wi8ie"]
 size = Vector2(51, 57)
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" unique_id=1099040178]
 script = ExtResource("1_wi8ie")
 
-[node name="Card" type="Node2D" parent="."]
+[node name="Card" type="Node2D" parent="." unique_id=357184034]
 script = ExtResource("1_3ujke")
 
-[node name="CardSprite" type="Sprite2D" parent="Card" groups=["draggable"]]
+[node name="CardSprite" type="Sprite2D" parent="Card" unique_id=799026464 groups=["draggable"]]
 scale = Vector2(0.32570425, 0.37894732)
 texture = ExtResource("1_dd2wi")
 
-[node name="CardText" type="RichTextLabel" parent="Card"]
+[node name="CardText" type="RichTextLabel" parent="Card" unique_id=1485563002]
 offset_left = -85.0
 offset_top = -136.0
 offset_right = 84.0
@@ -35,19 +35,19 @@ theme_override_fonts/italics_font = ExtResource("4_8ekg7")
 theme_override_fonts/mono_font = ExtResource("4_8ekg7")
 bbcode_enabled = true
 
-[node name="Area2D" type="Area2D" parent="Card"]
+[node name="Area2D" type="Area2D" parent="Card" unique_id=700450692]
 collision_layer = 2
 script = ExtResource("3_3ujke")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Card/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Card/Area2D" unique_id=867379164]
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_3ujke")
 debug_color = Color(0, 0.6, 0.69803923, 0.91764706)
 
-[node name="Area2D2" type="Area2D" parent="." groups=["snapzone"]]
+[node name="Area2D2" type="Area2D" parent="." unique_id=1940060665 groups=["snapzone"]]
 script = ExtResource("4_3ujke")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=839449839]
 position = Vector2(0.5, -0.5)
 shape = SubResource("RectangleShape2D_wi8ie")
 debug_color = Color(0.60929507, 0.3965506, 0.93012065, 0.41960785)
