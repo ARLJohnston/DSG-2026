@@ -31,6 +31,7 @@ snapzone="*uid://bsywdvkgl7ap6"
 [display]
 
 window/size/resizable=false
+window/stretch/aspect="expand"
 
 [global_group]
 
