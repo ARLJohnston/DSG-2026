@@ -1,11 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://b0cm4mq1q4bm4"]
+[gd_scene format=3 uid="uid://d3h6oqycgggjq"]
 
 [ext_resource type="Script" uid="uid://7wduq4qwcr6l" path="res://ending.gd" id="1_fsb5k"]
 [ext_resource type="Texture2D" uid="uid://teo10lsqs18g" path="res://assets/Background Block Colour 260026.png" id="2_dmh3q"]
 
-[node name="Ending" type="Node2D"]
+[node name="Ending" type="Node2D" unique_id=95260554]
 script = ExtResource("1_fsb5k")
 
-[node name="BG" type="Sprite2D" parent="."]
+[node name="BG" type="Sprite2D" parent="." unique_id=1752788504]
 scale = Vector2(4.626237, 4.626237)
 texture = ExtResource("2_dmh3q")
