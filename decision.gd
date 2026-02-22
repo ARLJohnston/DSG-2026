@@ -33,8 +33,8 @@ var label: RichTextLabel = RichTextLabel.new()
 
 func create_decision() -> void:
 	var screenDimensions: Vector2 = get_viewport().get_visible_rect().size
-	json_data.shuffle()
-	var individual_decision = json_data[0]
+	#json_data.shuffle()
+	var individual_decision = json_data.pick_random()
 	
 	label = RichTextLabel.new()
 	label.add_theme_font_override("normal_font", anubis)
@@ -58,7 +58,7 @@ func create_decision() -> void:
 	add_child(a)
 	add_child(b)
 	
-	json_data.remove_at(0)
+	#json_data.remove_at(0)
 
 func create_card(individual_decision) -> Card:
 	var c = card_scene.instantiate().get_node("Card") as Card

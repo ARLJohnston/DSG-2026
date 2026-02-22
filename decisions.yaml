@@ -1,344 +1,344 @@
 decisions:
   - summary: "You come across a [b]very[/b] kickable [color=red]cat[/color]"
-    option_a:
-      text: "You [b]kick[/b] the [color=red]cat[/color]"
-      outcome: "Why?"
-      values:
-        order: -1
-        morality: -1
-    option_b:
-      text: "You do not [b]kick[/b] the [color=red]cat[/color]"
-      outcome: "The cat kicks you instead."
-      values:
-        harmony: +1
-        justice: +1
+	option_a:
+	  text: "You [b]kick[/b] the [color=red]cat[/color]"
+	  outcome: "Why?"
+	  values:
+		order: -1
+		morality: -1
+	option_b:
+	  text: "You do not [b]kick[/b] the [color=red]cat[/color]"
+	  outcome: "The cat kicks you instead."
+	  values:
+		harmony: +1
+		justice: +1
   - summary: "You [b]find[/b] a [color=red]lost wallet[/color] in the street, full of money"
-    option_a:
-      text: "You [b]take[/b] [color=red]the wallet[/color] and all it's contents"
-      outcome: "No one finds out, but you will know."
-      values:
-        justice: +3
-        law: -3
-        morality: -1
-    option_b:
-      text: "You [b]return[/b] [color=red]the wallet[/color] to its owner"
-      outcome: "The owner is grateful, but you receive no reward."
-      values:
-        justice: -1
-        law: +2
-        morality: +1
+	option_a:
+	  text: "You [b]take[/b] [color=red]the wallet[/color] and all it's contents"
+	  outcome: "No one finds out, but you will know."
+	  values:
+		justice: +3
+		law: -3
+		morality: -1
+	option_b:
+	  text: "You [b]return[/b] [color=red]the wallet[/color] to its owner"
+	  outcome: "The owner is grateful, but you receive no reward."
+	  values:
+		justice: -1
+		law: +2
+		morality: +1
   - summary: "[color=red]Your daughter[/color] is being [b]bullied[/b] at school"
-    option_a:
-      text: "[b]Kick[/b] [color=red]the bully[/color]. Hard."
-      outcome: "You are reported to the school, and your daughter is now being bullied even more."
-      values:
-        morality: -3
-        order: -2
-        justice: +3
-    option_b: 
-      text: "Report the bully to the school authorities"
-      outcome: "The school takes action, and the bullying stops. Why wouldn't you do this?"
-      values:
-        truth: +2
-        justice: -2
-        morality: +2
+	option_a:
+	  text: "[b]Kick[/b] [color=red]the bully[/color]. Hard."
+	  outcome: "You are reported to the school, and your daughter is now being bullied even more."
+	  values:
+		morality: -3
+		order: -2
+		justice: +3
+	option_b: 
+	  text: "Report the bully to the school authorities"
+	  outcome: "The school takes action, and the bullying stops. Why wouldn't you do this?"
+	  values:
+		truth: +2
+		justice: -2
+		morality: +2
   - summary: "You [b]see[/b] someone [color=red]tying people to a train track[/color], and a train is coming"
-    option_a:
-      text: "You [b]fight[/b] the person, and try to [color=red]save the people[/color] on the tracks"
-      outcome: "You manage to save the people, but the person gets away."
-      values:
-        order: -1
-        harmony: +2
-        justice: +3
-    option_b:
-      text: "You [b]tie[/b] the [color=red]person[/color] to the tracks, let the train take them all"
-      outcome: "The train consumes all."
-      values:
-        morality: -3
-        law: -3
+	option_a:
+	  text: "You [b]fight[/b] the person, and try to [color=red]save the people[/color] on the tracks"
+	  outcome: "You manage to save the people, but the person gets away."
+	  values:
+		order: -1
+		harmony: +2
+		justice: +3
+	option_b:
+	  text: "You [b]tie[/b] the [color=red]person[/color] to the tracks, let the train take them all"
+	  outcome: "The train consumes all."
+	  values:
+		morality: -3
+		law: -3
   - summary: "Someone [color=red]insults[/color] [b]your tie[/b] in public"
-    option_a:
-      text: "You [b]continue walking[/b], and ignore [color=red]the insulter[/color]"
-      outcome: "You'll be thinking about this for the next month."
-      values:
-        balance: +1
-        harmony: +2
-        justice: -2
-    option_b: 
-      text: "You [b]shout[/b] back at [color=red]the insulter[/color]"
-      outcome: "The insulter is shocked and leaves you alone."
-      values:
-        truth: +2
-        balance: +1
-        order: -2
+	option_a:
+	  text: "You [b]continue walking[/b], and ignore [color=red]the insulter[/color]"
+	  outcome: "You'll be thinking about this for the next month."
+	  values:
+		balance: +1
+		harmony: +2
+		justice: -2
+	option_b: 
+	  text: "You [b]shout[/b] back at [color=red]the insulter[/color]"
+	  outcome: "The insulter is shocked and leaves you alone."
+	  values:
+		truth: +2
+		balance: +1
+		order: -2
   - summary: "You [color=red]accidentally[/color] knock over [b]the coffin[/b] at a funeral"
-    option_a:
-      text: "You quickly [b]pick up[/b] [color=red]the coffin[/color], and put it back in place"
-      outcome: "You somehow got more sympathetic looks than the deceased."
-      values:
-        order: +3
-        morality: +2
-    option_b:
-      text: "You [b]get in[/b] [color=red]the coffin[/color], and [b]pretend[/b] to be [color=red]the deceased[/color]"
-      outcome: "A therapist would have so much fun with you."
-      values:
-        harmony: -1
-        morality: -3
-        justice: -2
+	option_a:
+	  text: "You quickly [b]pick up[/b] [color=red]the coffin[/color], and put it back in place"
+	  outcome: "You somehow got more sympathetic looks than the deceased."
+	  values:
+		order: +3
+		morality: +2
+	option_b:
+	  text: "You [b]get in[/b] [color=red]the coffin[/color], and [b]pretend[/b] to be [color=red]the deceased[/color]"
+	  outcome: "A therapist would have so much fun with you."
+	  values:
+		harmony: -1
+		morality: -3
+		justice: -2
   - summary: "A co-worker is [color=red]stealing[/color] from the company"
-    option_a:
-      text: "You [b]report[/b] [color=red]the co-worker[/color] to your boss"
-      outcome: "The co-worker is fired, and everyone knows it was your fault."
-      values:
-        truth: +3
-        harmony: -3
-        law: +1
-    option_b:
-      text: "You [b]confront[/b] [color=red]the co-worker[/color], and try to convince them to stop"
-      outcome: "Weirdly, they kept doing it, and told everyone about you. Snitch."
-      values:
-        truth: -1
-        morality: 3
-        justice: -1
+	option_a:
+	  text: "You [b]report[/b] [color=red]the co-worker[/color] to your boss"
+	  outcome: "The co-worker is fired, and everyone knows it was your fault."
+	  values:
+		truth: +3
+		harmony: -3
+		law: +1
+	option_b:
+	  text: "You [b]confront[/b] [color=red]the co-worker[/color], and try to convince them to stop"
+	  outcome: "Weirdly, they kept doing it, and told everyone about you. Snitch."
+	  values:
+		truth: -1
+		morality: 3
+		justice: -1
   - summary: "Your [color=red]fiance[/color] is [b]cheating[/b] on you"
-    option_a:
-      text: "You [b]confront[/b] [color=red]your fiance[/color], and demand an explanation"
-      outcome: "Your fiance admits to cheating, and you break up, albeit amicably."
-      values:
-        truth: +3
-        order: +1
-        harmony: -1
-    option_b:
-      text: "You [b]ignore[/b] [color=red]the cheating[/color]"
-      outcome: "Your fiance continues to cheat, but it's too late to do anything about it."
-      values:
-        balance: -2
-        order: +2
-        justice: -2
+	option_a:
+	  text: "You [b]confront[/b] [color=red]your fiance[/color], and demand an explanation"
+	  outcome: "Your fiance admits to cheating, and you break up, albeit amicably."
+	  values:
+		truth: +3
+		order: +1
+		harmony: -1
+	option_b:
+	  text: "You [b]ignore[/b] [color=red]the cheating[/color]"
+	  outcome: "Your fiance continues to cheat, but it's too late to do anything about it."
+	  values:
+		balance: -2
+		order: +2
+		justice: -2
   - summary: "You see a [color=red]child[/color] being [b]hit on the back[/b] by their parent"
-    option_a:
-      text: "You [b]keep walking[/b], and mind your own business"
-      outcome: "They'll probably be fine. It's not your problem."
-      values:
-        truth: -2
-        harmony: +1
-        justice: +2
-    option_b:
-      text: "You [b]report[/b] [color=red]the abuse[/color] to the authorities"
-      outcome: "The child was choking on a piece of food, but was taken away from their parents anyway."
-      values:
-        truth: -3
-        law: +1
-        morality: -3
+	option_a:
+	  text: "You [b]keep walking[/b], and mind your own business"
+	  outcome: "They'll probably be fine. It's not your problem."
+	  values:
+		truth: -2
+		harmony: +1
+		justice: +2
+	option_b:
+	  text: "You [b]report[/b] [color=red]the abuse[/color] to the authorities"
+	  outcome: "The child was choking on a piece of food, but was taken away from their parents anyway."
+	  values:
+		truth: -3
+		law: +1
+		morality: -3
   - summary: "Your [color=red]best friend[/color] is [b]stealing[/b] from a store you are in together"
-    option_a:
-      text: "You [b]confront[/b] [color=red]your best friend[/color], and tell them to stop"
-      outcome: "Your conversation is overheard, and they are arrested."
-      values:
-        law: +2
-        morality: -1
-        justice: +3
-    option_b:
-      text: "You [b]help[/b] [color=red]your best friend[/color] steal, and try to get away with it"
-      outcome: "They get away with it, but you were caught, butterfingers."
-      values:
-        truth: -2
-        law: -3
-        morality: -1
+	option_a:
+	  text: "You [b]confront[/b] [color=red]your best friend[/color], and tell them to stop"
+	  outcome: "Your conversation is overheard, and they are arrested."
+	  values:
+		law: +2
+		morality: -1
+		justice: +3
+	option_b:
+	  text: "You [b]help[/b] [color=red]your best friend[/color] steal, and try to get away with it"
+	  outcome: "They get away with it, but you were caught, butterfingers."
+	  values:
+		truth: -2
+		law: -3
+		morality: -1
   - summary: "While on holiday, you [b]overhear[/b] a group of people discussing a [color=red]potential crime[/color]"
-    option_a:
-      text: "You [b]ignore[/b] [color=red]the conversation[/color]"
-      outcome: "That was none of your business, right?"
-      values:
-        truth: -1
-        harmony: +3
-        justice: -1
-    option_b:
-      text: "You attempt to [b]report[/b] [color=red]the potential crime[/color] to the police"
-      outcome: "You never hear back, however you don't feel safe for the rest of your stay."
-      values:
-        balance: -1
-        law: +1
-        morality: +2
+	option_a:
+	  text: "You [b]ignore[/b] [color=red]the conversation[/color]"
+	  outcome: "That was none of your business, right?"
+	  values:
+		truth: -1
+		harmony: +3
+		justice: -1
+	option_b:
+	  text: "You attempt to [b]report[/b] [color=red]the potential crime[/color] to the police"
+	  outcome: "You never hear back, however you don't feel safe for the rest of your stay."
+	  values:
+		balance: -1
+		law: +1
+		morality: +2
   - summary: "Your [color=red]negligent father[/color] is dying and needs a [b]kidney transplant[/b]"
-    option_a:
-      text: "You [b]donate[/b] your kidney to [color=red]your father[/color]"
-      outcome: "Not even a thank you."
-      values:
-        harmony: +1
-        morality: +2
-        justice: -2
-    option_b:
-      text: "You [b]refuse[/b] to donate your kidney to [color=red]your father[/color]"
-      outcome: "He dies, but you don't have to deal with him anymore."
-      values:
-        balance: +1
-        order: +1
-        justice: +2
+	option_a:
+	  text: "You [b]donate[/b] your kidney to [color=red]your father[/color]"
+	  outcome: "Not even a thank you."
+	  values:
+		harmony: +1
+		morality: +2
+		justice: -2
+	option_b:
+	  text: "You [b]refuse[/b] to donate your kidney to [color=red]your father[/color]"
+	  outcome: "He dies, but you don't have to deal with him anymore."
+	  values:
+		balance: +1
+		order: +1
+		justice: +2
   - summary: "You [b]find[/b] a [color=red]severely injured fox[/color] on the street, barely alive"
-    option_a:
-      text: "You [b]help[/b] the fox, and take it to a vet"
-      outcome: "The fox is saved, but you are stuck with the bill."
-      values:
-        truth: +3
-        balance: +1
-        morality: -1
-    option_b: 
-      text: "You [b]end[/b] [color=red]the fox[/color]'s suffering"
-      outcome: "It was barely alive, so it was probably the right thing to do."
-      values:
-        balance: -1
-        order: +1
-        morality: -1
+	option_a:
+	  text: "You [b]help[/b] the fox, and take it to a vet"
+	  outcome: "The fox is saved, but you are stuck with the bill."
+	  values:
+		truth: +3
+		balance: +1
+		morality: -1
+	option_b: 
+	  text: "You [b]end[/b] [color=red]the fox[/color]'s suffering"
+	  outcome: "It was barely alive, so it was probably the right thing to do."
+	  values:
+		balance: -1
+		order: +1
+		morality: -1
   - summary: "You're late for work while driving, and are [b]approaching[/b] a [color=red]chicken[/color] in the road"
-    option_a: 
-      text: "You [b]swerve[/b] to avoid hitting the [color=red]chicken[/color]"
-      outcome: "Somehow, no one saw that move, and you get to work on time."
-      values:
-        order: +2
-        law: -1
-        morality: +1
-    option_b:
-      text: "You [b]continue forward[/b], knocking [color=red]the chicken[/color] out of the way"
-      outcome: "I guess we'll never know..."
-      values:
-        balance: -2
-        morality: -1
+	option_a: 
+	  text: "You [b]swerve[/b] to avoid hitting the [color=red]chicken[/color]"
+	  outcome: "Somehow, no one saw that move, and you get to work on time."
+	  values:
+		order: +2
+		law: -1
+		morality: +1
+	option_b:
+	  text: "You [b]continue forward[/b], knocking [color=red]the chicken[/color] out of the way"
+	  outcome: "I guess we'll never know..."
+	  values:
+		balance: -2
+		morality: -1
   - summary: "Money is [b]embezzled[/b] from your company, and [color=red]you[/color] are the prime suspect"
-    option_a:
-      text: "You [b]report[/b] the real culprit, your [color=red]son[/color]"
-      outcome: "That's one way to get him out of the way."
-      values:
-        justice: +3
-        harmony: -2
-        morality: +2
-    option_b:
-      text: "You [b]take the blame[/b] for the embezzlement, and let [color=red]your son[/color] get away with it"
-      outcome: "Your reputation wasn't worth that much, I guess."
-      values:
-        truth: -3
-        balance: +1
-        justice: -2
+	option_a:
+	  text: "You [b]report[/b] the real culprit, your [color=red]son[/color]"
+	  outcome: "That's one way to get him out of the way."
+	  values:
+		justice: +3
+		harmony: -2
+		morality: +2
+	option_b:
+	  text: "You [b]take the blame[/b] for the embezzlement, and let [color=red]your son[/color] get away with it"
+	  outcome: "Your reputation wasn't worth that much, I guess."
+	  values:
+		truth: -3
+		balance: +1
+		justice: -2
   - summary: "Your [color=red]work enemy[/color] has spinach [b]stuck[/b] in their teeth, and is about to [b]give a speech[/b]"
-    option_a:
-      text: "You point out the spinach to [color=red]your work enemy[/color] [b]prior[/b] to the speech"
-      outcome: "They are grateful, maybe they aren't so bad after all?"
-      values:
-        truth: +3
-        order: -1
-        harmony: +1
-    option_b:
-      text: "You point out the spinach to [color=red]your work enemy[/color] [b]after[/b] the speech"
-      outcome: "They are embarrassed, and never socially recover. Serves them right."
-      values:
-        balance: +1
-        harmony: -1
-        justice: +2
+	option_a:
+	  text: "You point out the spinach to [color=red]your work enemy[/color] [b]prior[/b] to the speech"
+	  outcome: "They are grateful, maybe they aren't so bad after all?"
+	  values:
+		truth: +3
+		order: -1
+		harmony: +1
+	option_b:
+	  text: "You point out the spinach to [color=red]your work enemy[/color] [b]after[/b] the speech"
+	  outcome: "They are embarrassed, and never socially recover. Serves them right."
+	  values:
+		balance: +1
+		harmony: -1
+		justice: +2
   - summary: "Your [color=red]children's pet [/color][color=yellow]goldfish[/color] has a disease, and is [b]suffering[/b]"
-    option_a:
-      text: "Explain this to your children, and [b]get the goldfish put down[/b]"
-      outcome: "It doesn't feel like it now, but I'm sure they'll forgive you eventually."
-      values:
-        truth: +3
-        order: -2
-        harmony: +1
-    option_b:
-      text: "Leave the [color=yellow]goldfish[/color] untreated, and hope it gets better"
-      outcome: "It lasted a few more weeks, but it was a slow and painful death."
-      values:
-        balance: -2
-        harmony: +1
-        morality: -1
+	option_a:
+	  text: "Explain this to your children, and [b]get the goldfish put down[/b]"
+	  outcome: "It doesn't feel like it now, but I'm sure they'll forgive you eventually."
+	  values:
+		truth: +3
+		order: -2
+		harmony: +1
+	option_b:
+	  text: "Leave the [color=yellow]goldfish[/color] untreated, and hope it gets better"
+	  outcome: "It lasted a few more weeks, but it was a slow and painful death."
+	  values:
+		balance: -2
+		harmony: +1
+		morality: -1
   - summary: "You [b]hit and kill[/b] a [color=red]pedestrian[/color] while driving, but another woman believes she did it"
-    option_a:
-      text: "[b]Let her[/b] think [color=red]she[/color] did it"
-      outcome: "You saw her in the obituaries a few days later, that's sad."
-      values:
-        truth: -2
-        order: -3
-        law: +2
-    option_b:
-      text: "[b]Confess[/b] to [color=red]the crime[/color]"
-      outcome: "You are arrested and sentenced to 10 years in prison."
-      values:
-        balance: -2
-        morality: +2
-        justice: +2
+	option_a:
+	  text: "[b]Let her[/b] think [color=red]she[/color] did it"
+	  outcome: "You saw her in the obituaries a few days later, that's sad."
+	  values:
+		truth: -2
+		order: -3
+		law: +2
+	option_b:
+	  text: "[b]Confess[/b] to [color=red]the crime[/color]"
+	  outcome: "You are arrested and sentenced to 10 years in prison."
+	  values:
+		balance: -2
+		morality: +2
+		justice: +2
   - summary: "You suspect that your [color=red]friend[/color] is [b]cheating[/b] on their partner, but you have no proof"
-    option_a:
-      text: "You [b]confront[/b] your [color=red]friend[/color] about it"
-      outcome: "It's your word against theirs, and you aren't the most trustworthy person..."
-      values:
-        order: -2
-        morality: +2
-        justice: -3
-    option_b:
-      text: "Leave [color=red]your friend[/color] alone, this is not your problem"
-      outcome: "They remain together, but you can see behind his smile. Still, at least you didn't do anything."
-      values:
-        truth: -1
-        harmony: -3
-        balance: +2
+	option_a:
+	  text: "You [b]confront[/b] your [color=red]friend[/color] about it"
+	  outcome: "It's your word against theirs, and you aren't the most trustworthy person..."
+	  values:
+		order: -2
+		morality: +2
+		justice: -3
+	option_b:
+	  text: "Leave [color=red]your friend[/color] alone, this is not your problem"
+	  outcome: "They remain together, but you can see behind his smile. Still, at least you didn't do anything."
+	  values:
+		truth: -1
+		harmony: -3
+		balance: +2
   - summary: "You are on a [color=red]jury[/color], and [color=red]the defendant[/color] is [b]clearly guilty[/b], but you have a personal connection to them"
-    option_a:
-      text: "You must [b]vote guilty[/b], and do your duty as a [color=red]juror[/color]"
-      outcome: "He'll face the death penalty for this, you know?"
-      values:
-        order: +3
-        law: +3
-        justice: -2
-    option_b:
-      text: "You [b]vote not guilty[/b], and let your personal feelings get in the way of justice"
-      outcome: "Don't worry, manslaughter while drunk driving is hardly a crime, right?"
-      values:
-        balance: +2
-        morality: +2
-        justice: -1
+	option_a:
+	  text: "You must [b]vote guilty[/b], and do your duty as a [color=red]juror[/color]"
+	  outcome: "He'll face the death penalty for this, you know?"
+	  values:
+		order: +3
+		law: +3
+		justice: -2
+	option_b:
+	  text: "You [b]vote not guilty[/b], and let your personal feelings get in the way of justice"
+	  outcome: "Don't worry, manslaughter while drunk driving is hardly a crime, right?"
+	  values:
+		balance: +2
+		morality: +2
+		justice: -1
   - summary: "[color=red]Your roommate[/color] is furious someone [b]didn't do the dishes[/b]. (You didn't do the dishes)"
-    option_a:
-      text: "You [b]admit[/b] to not doing the dishes, you really should've."
-      outcome: "Your roommate understands, however you are on dish duty for the next month."
-      values:
-        truth: +2
-        harmony: +1
-        justice: -1
-    option_b:
-      text: "[b]Gaslight[/b] [color=red]your roommate[/color], wasn't it their turn?"
-      outcome: "You won the argument, but may need to find a new roommate soon."
-      values:
-        truth: -2
-        order: +2
-        harmony: -2
+	option_a:
+	  text: "You [b]admit[/b] to not doing the dishes, you really should've."
+	  outcome: "Your roommate understands, however you are on dish duty for the next month."
+	  values:
+		truth: +2
+		harmony: +1
+		justice: -1
+	option_b:
+	  text: "[b]Gaslight[/b] [color=red]your roommate[/color], wasn't it their turn?"
+	  outcome: "You won the argument, but may need to find a new roommate soon."
+	  values:
+		truth: -2
+		order: +2
+		harmony: -2
   - summary: "Your sibling is [color=red]dying[/color], and their last wish is for you to [b]kill them[/b] on their own terms."
-    option_a:
-      text: "[color=red]You[/color] grab the nearest pillow, and [b]do as they wish[/b]"
-      outcome: "A cure was found the next day, but it's too late now."
-      values: 
-        truth:  -2
-        law: -3
-        harmony: -1
-    option_b:
-      text: "[color=red]You[/color] would never do [b]that[/b]"
-      outcome: "Their death was long and painful, but at least you can sleep at night."
-      values:
-        harmony: -3
-        law: 1
-        morality: -2
+	option_a:
+	  text: "[color=red]You[/color] grab the nearest pillow, and [b]do as they wish[/b]"
+	  outcome: "A cure was found the next day, but it's too late now."
+	  values: 
+		truth:  -2
+		law: -3
+		harmony: -1
+	option_b:
+	  text: "[color=red]You[/color] would never do [b]that[/b]"
+	  outcome: "Their death was long and painful, but at least you can sleep at night."
+	  values:
+		harmony: -3
+		law: 1
+		morality: -2
   - summary: "[color=red]Reddit[/color] has [b]decided[/b] you're the asshole. How do you respond?"
-    option_a:
-      text: "Ignore it, Redditors have no power over you"
-      outcome: "Correct."
-      values:
-        truth: +2
-        harmony: +3
-        justice: +2
-    option_b:
-      text: "Fight back, there's two sides to every story"
-      outcome: "Wrong + You're an abuser. L"
-      values:
-        truth: -3
-        morality: +1
-        justice: -3
+	option_a:
+	  text: "Ignore it, Redditors have no power over you"
+	  outcome: "Correct."
+	  values:
+		truth: +2
+		harmony: +3
+		justice: +2
+	option_b:
+	  text: "Fight back, there's two sides to every story"
+	  outcome: "Wrong + You're an abuser. L"
+	  values:
+		truth: -3
+		morality: +1
+		justice: -3
 
 
 
