@@ -74,25 +74,25 @@ func create_card(individual_decision) -> Card:
 		match value:
 			"balance":
 				c.card_values[Values.Maat.balance] = score
-				card_text += "\n[rainbow][wave amp=50 freq=2]"+stringify(score)+"↔[/wave][/rainbow]" 
+				card_text += "\n[rainbow][wave amp=50 freq=2]"+stringify(score)+" Balance[/wave][/rainbow]" 
 			"harmony":
 				c.card_values[Values.Maat.harmony] = score
-				card_text += "\n[color=black]" +stringify(score)+"☥[/color]"
+				card_text += "\n[rainbow][wave amp=50 freq=2]"+stringify(score)+" Harmony[/wave][/rainbow]"
 			"justice":
 				c.card_values[Values.Maat.justice] = score
-				card_text += "\n[color=black]" +stringify(score)+"❆[/color]"
+				card_text += "\n[rainbow][wave amp=50 freq=2]"+stringify(score)+" Justice[/wave][/rainbow]"
 			"law":
 				c.card_values[Values.Maat.law] = score
-				card_text += "\n[color=black]" +stringify(score)+"⚖[/color]"
+				card_text += "\n[rainbow][wave amp=50 freq=2]"+stringify(score)+" Law[/wave][/rainbow]"
 			"morality":
 				c.card_values[Values.Maat.morality] = score
-				card_text += "\n[color=black]" +stringify(score)+"𓆠[/color]"
+				card_text += "\n[rainbow][wave amp=50 freq=2]"+stringify(score)+" Morality[/wave][/rainbow]"
 			"order":
 				c.card_values[Values.Maat.order] = score
-				card_text += "\n[color=black]" +stringify(score)+"ℚ[/color]"
+				card_text += "\n[rainbow][wave amp=50 freq=2]"+stringify(score)+" Order[/wave][/rainbow]"
 			"truth":
 				c.card_values[Values.Maat.truth] = score
-				card_text += "\n[color=black]" +stringify(score)+"⌆[/color]"
+				card_text += "\n[rainbow][wave amp=50 freq=2]"+stringify(score)+" Truth[/wave][/rainbow]"
 
 	label.text = card_text
 	return c.get_parent()
