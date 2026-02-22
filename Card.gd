@@ -19,6 +19,9 @@ var card_values: Dictionary[Values.Maat, int] = {
  	Values.Maat.order:0,
  	Values.Maat.truth: 0  
 }
+	
+func print_thing(s) -> void:
+	print(s)
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.is_released() and at_drop_area:

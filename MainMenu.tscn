@@ -1,31 +1,30 @@
-[gd_scene load_steps=4 format=3 uid="uid://cttk7ufnjvvp6"]
+[gd_scene format=3 uid="uid://cttk7ufnjvvp6"]
 
 [ext_resource type="Script" uid="uid://df2fi3mh2kaah" path="res://main_menu.gd" id="1_i26rj"]
 [ext_resource type="AudioStream" uid="uid://cpsmjdbnwydw2" path="res://assets/audio/music/IntroAmbientBoring.mp3" id="2_eiy7p"]
 [ext_resource type="AudioStream" uid="uid://jo3qo8a0j6ka" path="res://assets/audio/soundeffects/menuMove2.wav" id="3_h7a2f"]
 
-[node name="Main Menu" type="Node2D"]
+[node name="Main Menu" type="Node2D" unique_id=647328515]
 position = Vector2(529, 329)
 script = ExtResource("1_i26rj")
 
-[node name="Button" type="Button" parent="."]
+[node name="Button" type="Button" parent="." unique_id=365481151]
 offset_left = -19.0
 offset_top = -27.0
 offset_right = 88.0
 offset_bottom = 27.0
-text = "BUTTON
-(tim)"
+text = "Play Game"
 script = ExtResource("1_i26rj")
 
-[node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="." unique_id=1945253182]
 stream = ExtResource("2_eiy7p")
 volume_db = 0.912
 autoplay = true
 
-[node name="HoverNoise" type="AudioStreamPlayer" parent="."]
+[node name="HoverNoise" type="AudioStreamPlayer" parent="." unique_id=1090304241]
 stream = ExtResource("3_h7a2f")
 
-[node name="FadeOut" type="ColorRect" parent="."]
+[node name="FadeOut" type="ColorRect" parent="." unique_id=749482898]
 visible = false
 offset_left = -1000.0
 offset_top = -1000.0

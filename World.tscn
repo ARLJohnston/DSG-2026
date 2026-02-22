@@ -1,9 +1,9 @@
-[gd_scene load_steps=21 format=3 uid="uid://dgnsimb7wbd6i"]
+[gd_scene format=3 uid="uid://dgnsimb7wbd6i"]
 
 [ext_resource type="Script" uid="uid://dvds0u2jtl5qm" path="res://dumpzone.gd" id="1_2dftf"]
 [ext_resource type="Script" uid="uid://d25lgdetygb7c" path="res://world.gd" id="1_c6gwx"]
 [ext_resource type="Texture2D" uid="uid://dbng7n5r12a3o" path="res://assets/Fire Base.png" id="2_js7pq"]
-[ext_resource type="Script" uid="uid://cutgtnah3klot" path="res://dumpzone_position.gd" id="2_p1v5b"]
+[ext_resource type="Script" path="res://dumpzone_position.gd" id="2_p1v5b"]
 [ext_resource type="Script" path="res://animated_sprite_2d.gd" id="3_eu7l1"]
 [ext_resource type="Texture2D" uid="uid://cvn42it76safw" path="res://assets/Fire Flare Up.png" id="3_p1v5b"]
 
@@ -107,30 +107,30 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2dftf"]
 size = Vector2(477.87607, 724.3858)
 
-[node name="World Node" type="Node2D"]
+[node name="World Node" type="Node2D" unique_id=1374439992]
 script = ExtResource("1_c6gwx")
 
-[node name="Dumpzone" type="Node2D" parent="." groups=["dropzone"]]
+[node name="Dumpzone" type="Node2D" parent="." unique_id=970478501 groups=["dropzone"]]
 script = ExtResource("2_p1v5b")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Dumpzone"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Dumpzone" unique_id=1419203347]
 position = Vector2(0, -55)
 scale = Vector2(2.9833333, 2.983333)
 sprite_frames = SubResource("SpriteFrames_fvag4")
 animation = &"flare"
 script = ExtResource("3_eu7l1")
 
-[node name="DumpZoneArea" type="Area2D" parent="Dumpzone" groups=["dropzone"]]
+[node name="DumpZoneArea" type="Area2D" parent="Dumpzone" unique_id=1217290583 groups=["dropzone"]]
 scale = Vector2(0.28249997, 0.25833338)
 script = ExtResource("1_2dftf")
 
-[node name="DumpZoneCollision" type="CollisionShape2D" parent="Dumpzone/DumpZoneArea" groups=["dropzone"]]
+[node name="DumpZoneCollision" type="CollisionShape2D" parent="Dumpzone/DumpZoneArea" unique_id=2121378128 groups=["dropzone"]]
 shape = SubResource("RectangleShape2D_2dftf")
 
-[node name="FadeLayer" type="CanvasLayer" parent="."]
+[node name="FadeLayer" type="CanvasLayer" parent="." unique_id=1818477299]
 layer = 100
 
-[node name="Fade" type="ColorRect" parent="FadeLayer"]
+[node name="Fade" type="ColorRect" parent="FadeLayer" unique_id=2108167938]
 visible = false
 offset_left = -100.0
 offset_top = -100.0
