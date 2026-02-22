@@ -1,12 +1,12 @@
-[gd_scene load_steps=37 format=3 uid="uid://dgnsimb7wbd6i"]
+[gd_scene format=3 uid="uid://dgnsimb7wbd6i"]
 
 [ext_resource type="Script" uid="uid://dvds0u2jtl5qm" path="res://dumpzone.gd" id="1_2dftf"]
 [ext_resource type="Script" uid="uid://d25lgdetygb7c" path="res://world.gd" id="1_c6gwx"]
 [ext_resource type="Texture2D" uid="uid://teo10lsqs18g" path="res://assets/Background Block Colour 260026.png" id="2_fvag4"]
 [ext_resource type="Texture2D" uid="uid://dbng7n5r12a3o" path="res://assets/Fire Base.png" id="2_js7pq"]
-[ext_resource type="Script" uid="uid://cutgtnah3klot" path="res://dumpzone_position.gd" id="2_p1v5b"]
+[ext_resource type="Script" path="res://dumpzone_position.gd" id="2_p1v5b"]
 [ext_resource type="AudioStream" uid="uid://c8kstv88bpsbn" path="res://assets/audio/music/InterestingAudio2.mp3" id="3_b2ar6"]
-[ext_resource type="Script" uid="uid://is3oma8hricm" path="res://Nebula.gd" id="3_eu7l1"]
+[ext_resource type="Script" uid="uid://bj4oonpnvxu0r" path="res://Nebula.gd" id="3_eu7l1"]
 [ext_resource type="Texture2D" uid="uid://61g57b3okyhr" path="res://assets/Scale Stand.png" id="3_kva58"]
 [ext_resource type="Texture2D" uid="uid://cvn42it76safw" path="res://assets/Fire Flare Up.png" id="3_p1v5b"]
 [ext_resource type="Texture2D" uid="uid://cyvrs7ooxb778" path="res://assets/Feather Scale.png" id="4_f5c0m"]
@@ -179,35 +179,35 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2dftf"]
 size = Vector2(477.87607, 724.3858)
 
-[node name="World Node" type="Node2D"]
+[node name="World Node" type="Node2D" unique_id=2064446262]
 script = ExtResource("1_c6gwx")
 
-[node name="BackgroundBlockColour260026" type="Sprite2D" parent="."]
+[node name="BackgroundBlockColour260026" type="Sprite2D" parent="." unique_id=1603140612]
 z_index = -3
 position = Vector2(580, 321)
 scale = Vector2(3.6171873, 2.6875)
 texture = ExtResource("2_fvag4")
 script = SubResource("GDScript_gn8l5")
 
-[node name="Background Music" type="AudioStreamPlayer" parent="BackgroundBlockColour260026"]
+[node name="Background Music" type="AudioStreamPlayer" parent="BackgroundBlockColour260026" unique_id=1695194811]
 stream = ExtResource("3_b2ar6")
 autoplay = true
 parameters/looping = false
 
-[node name="Nebula" type="AnimatedSprite2D" parent="BackgroundBlockColour260026"]
+[node name="Nebula" type="AnimatedSprite2D" parent="BackgroundBlockColour260026" unique_id=1764721685]
 position = Vector2(-158.20302, -121.11628)
 scale = Vector2(0.2764579, 0.37209302)
 sprite_frames = SubResource("SpriteFrames_5j71u")
 frame_progress = 0.8398719
 script = ExtResource("3_eu7l1")
 
-[node name="Dumpzone" type="Node2D" parent="." groups=["dropzone"]]
+[node name="Dumpzone" type="Node2D" parent="." unique_id=68590968 groups=["dropzone"]]
 z_index = 10
 z_as_relative = false
 y_sort_enabled = true
 script = ExtResource("2_p1v5b")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Dumpzone"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Dumpzone" unique_id=734983194]
 z_index = 10
 z_as_relative = false
 y_sort_enabled = true
@@ -217,48 +217,48 @@ sprite_frames = SubResource("SpriteFrames_fvag4")
 animation = &"flare"
 script = ExtResource("9_gn8l5")
 
-[node name="FireConsume" type="AudioStreamPlayer" parent="Dumpzone/AnimatedSprite2D"]
+[node name="FireConsume" type="AudioStreamPlayer" parent="Dumpzone/AnimatedSprite2D" unique_id=277265364]
 stream = ExtResource("7_f5c0m")
 pitch_scale = 1.21
 
-[node name="DumpZoneArea" type="Area2D" parent="Dumpzone" groups=["dropzone"]]
+[node name="DumpZoneArea" type="Area2D" parent="Dumpzone" unique_id=1301193193 groups=["dropzone"]]
 z_index = 10
 z_as_relative = false
 y_sort_enabled = true
 scale = Vector2(0.28249997, 0.25833338)
 script = ExtResource("1_2dftf")
 
-[node name="DumpZoneCollision" type="CollisionShape2D" parent="Dumpzone/DumpZoneArea" groups=["dropzone"]]
+[node name="DumpZoneCollision" type="CollisionShape2D" parent="Dumpzone/DumpZoneArea" unique_id=864361670 groups=["dropzone"]]
 z_index = 10
 z_as_relative = false
 y_sort_enabled = true
 shape = SubResource("RectangleShape2D_2dftf")
 
-[node name="ScaleStand" type="Sprite2D" parent="."]
+[node name="ScaleStand" type="Sprite2D" parent="." unique_id=1095310252]
 z_index = -1
 position = Vector2(576, 349)
 scale = Vector2(2.5755813, 2.5755813)
 texture = ExtResource("3_kva58")
 
-[node name="ScaleBar" type="Sprite2D" parent="."]
+[node name="ScaleBar" type="Sprite2D" parent="." unique_id=1836761682]
 z_index = -1
 position = Vector2(576, 111)
 scale = Vector2(3.2, 3.2)
 texture = ExtResource("6_ee7l0")
 
-[node name="FeatherScale" type="Sprite2D" parent="."]
+[node name="FeatherScale" type="Sprite2D" parent="." unique_id=2109280250]
 z_index = -2
 position = Vector2(234, 335)
 scale = Vector2(2.225, 2.225)
 texture = ExtResource("4_f5c0m")
 
-[node name="HeartScale" type="Sprite2D" parent="."]
+[node name="HeartScale" type="Sprite2D" parent="." unique_id=969840726]
 z_index = -2
 position = Vector2(918, 328)
 scale = Vector2(2.2499998, 2.2499998)
 texture = ExtResource("5_b2ar6")
 
-[node name="Fade" type="ColorRect" parent="."]
+[node name="Fade" type="ColorRect" parent="." unique_id=177270248]
 z_index = 1
 y_sort_enabled = true
 offset_left = -100.0
@@ -267,7 +267,8 @@ offset_right = 39900.0
 offset_bottom = 39900.0
 color = Color(0, 0, 0, 1)
 
-[node name="Anubis" type="Sprite2D" parent="."]
+[node name="Anubis" type="Sprite2D" parent="." unique_id=561566735]
+z_index = -1
 position = Vector2(578, 346)
 scale = Vector2(3.05625, 3.05625)
 texture = ExtResource("16_6w02q")
