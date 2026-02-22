@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0cm4mq1q4bm4"]
+
+[ext_resource type="Script" uid="uid://7wduq4qwcr6l" path="res://ending.gd" id="1_fsb5k"]
+[ext_resource type="Texture2D" uid="uid://teo10lsqs18g" path="res://assets/Background Block Colour 260026.png" id="2_dmh3q"]
+
+[node name="Ending" type="Node2D"]
+script = ExtResource("1_fsb5k")
+
+[node name="BG" type="Sprite2D" parent="."]
+scale = Vector2(4.626237, 4.626237)
+texture = ExtResource("2_dmh3q")
