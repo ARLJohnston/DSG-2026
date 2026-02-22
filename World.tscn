@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://d25lgdetygb7c" path="res://world.gd" id="1_c6gwx"]
 [ext_resource type="Texture2D" uid="uid://teo10lsqs18g" path="res://assets/Background Block Colour 260026.png" id="2_fvag4"]
 [ext_resource type="Texture2D" uid="uid://dbng7n5r12a3o" path="res://assets/Fire Base.png" id="2_js7pq"]
-[ext_resource type="Script" path="res://dumpzone_position.gd" id="2_p1v5b"]
+[ext_resource type="Script" uid="uid://cutgtnah3klot" path="res://dumpzone_position.gd" id="2_p1v5b"]
 [ext_resource type="Script" uid="uid://ct8lug8p63xj7" path="res://animated_sprite_2d.gd" id="3_eu7l1"]
 [ext_resource type="Texture2D" uid="uid://61g57b3okyhr" path="res://assets/Scale Stand.png" id="3_kva58"]
 [ext_resource type="Texture2D" uid="uid://cvn42it76safw" path="res://assets/Fire Flare Up.png" id="3_p1v5b"]
@@ -106,7 +106,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"flare",
-"speed": 5.0
+"speed": 7.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2dftf"]
@@ -120,29 +120,44 @@ z_index = -3
 position = Vector2(572.24994, 325.5)
 scale = Vector2(3.6171873, 2.6875)
 texture = ExtResource("2_fvag4")
+[node name="World Node" type="Node2D"]
+z_as_relative = false
+y_sort_enabled = true
+script = ExtResource("1_c6gwx")
 
-[node name="Dumpzone" type="Node2D" parent="." unique_id=64503903 groups=["dropzone"]]
+[node name="Dumpzone" type="Node2D" parent="." groups=["dropzone"]]
+z_index = 10
+z_as_relative = false
+y_sort_enabled = true
 script = ExtResource("2_p1v5b")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Dumpzone" unique_id=1510566659]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Dumpzone"]
+z_index = 10
+z_as_relative = false
+y_sort_enabled = true
 position = Vector2(0, -55)
 scale = Vector2(2.9833333, 2.983333)
 sprite_frames = SubResource("SpriteFrames_fvag4")
 animation = &"flare"
 script = ExtResource("3_eu7l1")
 
-[node name="DumpZoneArea" type="Area2D" parent="Dumpzone" unique_id=481630345 groups=["dropzone"]]
+[node name="DumpZoneArea" type="Area2D" parent="Dumpzone" groups=["dropzone"]]
+z_index = 10
+z_as_relative = false
+y_sort_enabled = true
 scale = Vector2(0.28249997, 0.25833338)
 script = ExtResource("1_2dftf")
 
-[node name="DumpZoneCollision" type="CollisionShape2D" parent="Dumpzone/DumpZoneArea" unique_id=2025139102 groups=["dropzone"]]
+[node name="DumpZoneCollision" type="CollisionShape2D" parent="Dumpzone/DumpZoneArea" groups=["dropzone"]]
+z_index = 10
+z_as_relative = false
+y_sort_enabled = true
 shape = SubResource("RectangleShape2D_2dftf")
 
-[node name="FadeLayer" type="CanvasLayer" parent="." unique_id=853828242]
-layer = 100
-
-[node name="Fade" type="ColorRect" parent="FadeLayer" unique_id=58035132]
-visible = false
+[node name="Fade" type="ColorRect" parent="."]
+z_index = 1
+z_as_relative = false
+y_sort_enabled = true
 offset_left = -100.0
 offset_top = -100.0
 offset_right = 39900.0

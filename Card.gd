@@ -30,6 +30,7 @@ func onChoose() -> void:
 	for k in card_values:
 		if card_values[k] != 0:
 			global_score.game_score[k] = card_values[k]
+	message_bus.FADE_OUT.emit(self.outcome)
 	message_bus.ROUND_END.emit()
 
 func _on_area_2d_area_entered(area: Area2D) -> void:

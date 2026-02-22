@@ -1,13 +1,46 @@
 extends Node2D
 
+var fm: RichTextLabel
+var faded: bool = false
+var anubis: Font
 #class_name World
 # This was breaking stuff for me - Mac Guy
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
+func fade_in() -> void:
 	var fade_in_box = create_tween()
-	fade_in_box.tween_property($FadeLayer/Fade, "color", Color(0, 0, 0, 0), 1)
-	await get_tree().create_timer(1.0).timeout
+	fade_in_box.tween_property($Fade, "color", Color(0, 0, 0, 0), 1)
+	if fm:
+		fm.queue_free()
+	faded = false
+	
+func fade_out(msg: String) -> void:
+	print("fading out")
+	var fade_in_box = create_tween()
+	fade_in_box.tween_property($Fade, "color", Color(0, 0, 0, 1), 1)
+	if msg != "":
+		var vp: Vector2 = get_viewport().get_visible_rect().size
+		var fadedMessage = RichTextLabel.new()
+		fadedMessage.add_theme_font_override("normal_font", anubis)
+		fadedMessage.add_theme_font_override("bold_font", anubis)
+		fadedMessage.bbcode_enabled = true
+		fadedMessage.text = "[color=white]" + msg + "[/color]"
+		fadedMessage.custom_minimum_size = Vector2(300, 100)
+		fadedMessage.position = (vp / 2) - (fadedMessage.custom_minimum_size / 2)
+		fadedMessage.z_index = 10
+		fadedMessage.z_as_relative = false
+		fadedMessage.y_sort_enabled = true
+		add_child(fadedMessage)
+		fm = fadedMessage
+		faded = true
+	else:
+		await get_tree().create_timer(1.0).timeout
+		message_bus.FADE_IN.emit()
+	
+func _ready() -> void:
+	fade_in()
+	anubis = load("res://assets/fonts/anubis-mythical-font/Anubismythicalserif-lxdLy.otf")
+	
+	message_bus.FADE_IN.connect(fade_in)
+	message_bus.FADE_OUT.connect(fade_out)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -16,6 +49,10 @@ func _process(delta: float) -> void:
 		return
 	# clamp the mouse to the game world
 	_clamp()
+
+func _input(event: InputEvent) -> void:
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and faded:
+		fade_in()
 
 func _clamp() -> void:
 	var max_x = get_viewport().size.x
