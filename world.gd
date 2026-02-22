@@ -36,6 +36,7 @@ func fade_out(msg: String) -> void:
 		message_bus.FADE_IN.emit()
 	
 func _ready() -> void:
+	
 	fade_in()
 	anubis = load("res://assets/fonts/anubis-mythical-font/Anubismythicalserif-lxdLy.otf")
 	
