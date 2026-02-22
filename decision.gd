@@ -16,10 +16,6 @@ func _ready() -> void:
 	# Spawn cards when game starts from main menu
 	message_bus.GAME_START.connect(round)
 	message_bus.ROUND_END.connect(round)
-	message_bus.ALL_ROUNDS_DONE.connect(reset)
-	
-func reset():
-	rounds_left = 5
 	
 func round() -> void:
 	label.queue_free()

@@ -1,3 +1,4 @@
+
 extends AnimatedSprite2D
 @onready var nebula: AnimatedSprite2D = $"."
 

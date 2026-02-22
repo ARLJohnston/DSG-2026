@@ -1,6 +1,6 @@
 extends Node2D
 
-var fadedMessage: RichTextLabel
+var fm: RichTextLabel
 var faded: bool = false
 var anubis: Font
 #class_name World
@@ -8,8 +8,8 @@ var anubis: Font
 func fade_in() -> void:
 	var fade_in_box = create_tween()
 	fade_in_box.tween_property($Fade, "color", Color(0, 0, 0, 0), 1)
-	if fadedMessage:
-		fadedMessage.queue_free()
+	if fm:
+		fm.queue_free()
 	faded = false
 	
 func fade_out(msg: String) -> void:
@@ -18,7 +18,7 @@ func fade_out(msg: String) -> void:
 	fade_in_box.tween_property($Fade, "color", Color(0, 0, 0, 1), 1)
 	if msg != "":
 		var vp: Vector2 = get_viewport().get_visible_rect().size
-		fadedMessage = RichTextLabel.new()
+		var fadedMessage = RichTextLabel.new()
 		fadedMessage.add_theme_font_override("normal_font", anubis)
 		fadedMessage.add_theme_font_override("bold_font", anubis)
 		fadedMessage.bbcode_enabled = true
@@ -29,16 +29,11 @@ func fade_out(msg: String) -> void:
 		fadedMessage.z_as_relative = false
 		fadedMessage.y_sort_enabled = true
 		add_child(fadedMessage)
+		fm = fadedMessage
 		faded = true
 	else:
 		await get_tree().create_timer(1.0).timeout
 		message_bus.FADE_IN.emit()
-	
-func set_ended():
-	if get_tree():
-		get_tree().change_scene_to_file("res://ending.tscn")
-		queue_free()
-
 	
 func _ready() -> void:
 	fade_in()
@@ -46,8 +41,7 @@ func _ready() -> void:
 	
 	message_bus.FADE_IN.connect(fade_in)
 	message_bus.FADE_OUT.connect(fade_out)
-	message_bus.ALL_ROUNDS_DONE.connect(set_ended)
-	
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	# Avoid the mouse being held hostage by the game when it shouldn't be.
@@ -59,11 +53,6 @@ func _process(delta: float) -> void:
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and faded:
 		fade_in()
-	
-		
-	#if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and ended:
-	#	fade_in()
-	#	get_tree().change_scene_to_file("res://MainMenu.tscn")
 
 func _clamp() -> void:
 	var max_x = get_viewport().size.x
