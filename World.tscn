@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://d25lgdetygb7c" path="res://world.gd" id="1_c6gwx"]
 [ext_resource type="Texture2D" uid="uid://teo10lsqs18g" path="res://assets/Background Block Colour 260026.png" id="2_fvag4"]
 [ext_resource type="Texture2D" uid="uid://dbng7n5r12a3o" path="res://assets/Fire Base.png" id="2_js7pq"]
-[ext_resource type="Script" path="res://dumpzone_position.gd" id="2_p1v5b"]
+[ext_resource type="Script" uid="uid://cutgtnah3klot" path="res://dumpzone_position.gd" id="2_p1v5b"]
 [ext_resource type="AudioStream" uid="uid://c8kstv88bpsbn" path="res://assets/audio/music/InterestingAudio2.mp3" id="3_b2ar6"]
 [ext_resource type="Script" uid="uid://bj4oonpnvxu0r" path="res://Nebula.gd" id="3_eu7l1"]
 [ext_resource type="Texture2D" uid="uid://61g57b3okyhr" path="res://assets/Scale Stand.png" id="3_kva58"]
@@ -262,7 +262,6 @@ position = Vector2(2031.8585, 2136.7737)
 shape = SubResource("RectangleShape2D_2dftf")
 
 [node name="Fade" type="ColorRect" parent="." unique_id=177270248]
-visible = false
 z_index = 1
 y_sort_enabled = true
 offset_left = -100.0
