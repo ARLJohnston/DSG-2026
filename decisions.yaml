@@ -75,7 +75,7 @@ decisions:
   - summary: "You [color=red]accidentally[/color] knock over [b]the coffin[/b] at a funeral"
     option_a:
       text: "You quickly [b]pick up[/b] [color=red]the coffin[/color], and put it back in place"
-      outcome:
+      outcome: "You somehow got more sympathetic looks than the deceased."
       values:
         order: +2
         morality: +2
@@ -235,7 +235,7 @@ decisions:
         balance: +1
         harmony: -2
         justice: +2
-  - summary: "Your [color=red]children's pet[/color][color=yellow]goldfish[/color] has a disease, and is [b]suffering[/b]"
+  - summary: "Your [color=red]children's pet [/color][color=yellow]goldfish[/color] has a disease, and is [b]suffering[/b]"
     option_a:
       text: "Explain this to your children, and [b]get the goldfish put down[/b]"
       outcome: "It doesn't feel like it now, but I'm sure they'll forgive you eventually."
@@ -340,28 +340,6 @@ decisions:
         truth: -3
         morality: +1
         justice: -3
-
-#  - summary:
-#    option_a:
-#      text:
-#      values:
-#        truth:
-#        balance:
-#        order:
-#        harmony:
-#        law:
-#        morality:
-#        justice:
-#    option_b:
-#      text:
-#      values:
-#        truth:
-#        balance:
-#        order:
-#        harmony:
-#        law:
-#        morality:
-#        justice:
 
 
 
