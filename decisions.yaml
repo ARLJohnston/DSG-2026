@@ -32,7 +32,7 @@ decisions:
       text: "[b]Kick[/b] [color=red]the bully[/color]. Hard."
       outcome: "You are reported to the school, and your daughter is now being bullied even more."
       values:
-        morality: -2
+        morality: -3
         order: -2
         justice: +3
     option_b: 
@@ -41,7 +41,7 @@ decisions:
       values:
         truth: +2
         justice: -2
-        morality: +3
+        morality: +2
   - summary: "You [b]see[/b] someone [color=red]tying people to a train track[/color], and a train is coming"
     option_a:
       text: "You [b]fight[/b] the person, and try to [color=red]save the people[/color] on the tracks"
@@ -49,7 +49,7 @@ decisions:
       values:
         order: -1
         harmony: +2
-        justice: +2
+        justice: +3
     option_b:
       text: "You [b]tie[/b] the [color=red]person[/color] to the tracks, let the train take them all"
       outcome: "The train consumes all."
@@ -63,7 +63,7 @@ decisions:
       values:
         balance: +1
         harmony: +2
-        justice: -3
+        justice: -2
     option_b: 
       text: "You [b]shout[/b] back at [color=red]the insulter[/color]"
       outcome: "The insulter is shocked and leaves you alone."
@@ -76,7 +76,7 @@ decisions:
       text: "You quickly [b]pick up[/b] [color=red]the coffin[/color], and put it back in place"
       outcome: "You somehow got more sympathetic looks than the deceased."
       values:
-        order: +2
+        order: +3
         morality: +2
     option_b:
       text: "You [b]get in[/b] [color=red]the coffin[/color], and [b]pretend[/b] to be [color=red]the deceased[/color]"
@@ -98,7 +98,7 @@ decisions:
       outcome: "Weirdly, they kept doing it, and told everyone about you. Snitch."
       values:
         truth: -1
-        morality: 2
+        morality: 3
         justice: -1
   - summary: "Your [color=red]fiance[/color] is [b]cheating[/b] on you"
     option_a:
@@ -129,7 +129,7 @@ decisions:
       values:
         truth: -3
         law: +1
-        morality: -2
+        morality: -3
   - summary: "Your [color=red]best friend[/color] is [b]stealing[/b] from a store you are in together"
     option_a:
       text: "You [b]confront[/b] [color=red]your best friend[/color], and tell them to stop"
@@ -137,14 +137,14 @@ decisions:
       values:
         law: +2
         morality: -1
-        justice: +2
+        justice: +3
     option_b:
       text: "You [b]help[/b] [color=red]your best friend[/color] steal, and try to get away with it"
       outcome: "They get away with it, but you were caught, butterfingers."
       values:
         truth: -2
         law: -3
-        morality: -2
+        morality: -1
   - summary: "While on holiday, you [b]overhear[/b] a group of people discussing a [color=red]potential crime[/color]"
     option_a:
       text: "You [b]ignore[/b] [color=red]the conversation[/color]"
@@ -166,8 +166,8 @@ decisions:
       outcome: "Not even a thank you."
       values:
         harmony: +1
-        morality: +3
-        justice: -3
+        morality: +2
+        justice: -2
     option_b:
       text: "You [b]refuse[/b] to donate your kidney to [color=red]your father[/color]"
       outcome: "He dies, but you don't have to deal with him anymore."
@@ -197,7 +197,7 @@ decisions:
       values:
         order: +2
         law: -1
-        morality: +2
+        morality: +1
     option_b:
       text: "You [b]continue forward[/b], knocking [color=red]the chicken[/color] out of the way"
       outcome: "I guess we'll never know..."
@@ -209,9 +209,9 @@ decisions:
       text: "You [b]report[/b] the real culprit, your [color=red]son[/color]"
       outcome: "That's one way to get him out of the way."
       values:
-        justice: +2
+        justice: +3
         harmony: -2
-        morality: +1
+        morality: +2
     option_b:
       text: "You [b]take the blame[/b] for the embezzlement, and let [color=red]your son[/color] get away with it"
       outcome: "Your reputation wasn't worth that much, I guess."
@@ -225,14 +225,14 @@ decisions:
       outcome: "They are grateful, maybe they aren't so bad after all?"
       values:
         truth: +3
-        order: -3
+        order: -1
         harmony: +1
     option_b:
       text: "You point out the spinach to [color=red]your work enemy[/color] [b]after[/b] the speech"
       outcome: "They are embarrassed, and never socially recover. Serves them right."
       values:
         balance: +1
-        harmony: -2
+        harmony: -1
         justice: +2
   - summary: "Your [color=red]children's pet [/color][color=yellow]goldfish[/color] has a disease, and is [b]suffering[/b]"
     option_a:
@@ -240,7 +240,7 @@ decisions:
       outcome: "It doesn't feel like it now, but I'm sure they'll forgive you eventually."
       values:
         truth: +3
-        order: -3
+        order: -2
         harmony: +1
     option_b:
       text: "Leave the [color=yellow]goldfish[/color] untreated, and hope it gets better"
@@ -262,7 +262,7 @@ decisions:
       outcome: "You are arrested and sentenced to 10 years in prison."
       values:
         balance: -2
-        morality: +3
+        morality: +2
         justice: +2
   - summary: "You suspect that your [color=red]friend[/color] is [b]cheating[/b] on their partner, but you have no proof"
     option_a:
@@ -277,7 +277,7 @@ decisions:
       outcome: "They remain together, but you can see behind his smile. Still, at least you didn't do anything."
       values:
         truth: -1
-        harmony: -2
+        harmony: -3
         balance: +2
   - summary: "You are on a [color=red]jury[/color], and [color=red]the defendant[/color] is [b]clearly guilty[/b], but you have a personal connection to them"
     option_a:
@@ -292,7 +292,7 @@ decisions:
       outcome: "Don't worry, manslaughter while drunk driving is hardly a crime, right?"
       values:
         balance: +2
-        morality: +3
+        morality: +2
         justice: -1
   - summary: "[color=red]Your roommate[/color] is furious someone [b]didn't do the dishes[/b]. (You didn't do the dishes)"
     option_a:
@@ -301,14 +301,14 @@ decisions:
       values:
         truth: +2
         harmony: +1
-        justice: -2
+        justice: -1
     option_b:
       text: "[b]Gaslight[/b] [color=red]your roommate[/color], wasn't it their turn?"
       outcome: "You won the argument, but may need to find a new roommate soon."
       values:
         truth: -2
-        order: +1
-        harmony: -1
+        order: +2
+        harmony: -2
   - summary: "Your sibling is [color=red]dying[/color], and their last wish is for you to [b]kill them[/b] on their own terms."
     option_a:
       text: "[color=red]You[/color] grab the nearest pillow, and [b]do as they wish[/b]"
@@ -321,7 +321,7 @@ decisions:
       text: "[color=red]You[/color] would never do [b]that[/b]"
       outcome: "Their death was long and painful, but at least you can sleep at night."
       values:
-        harmony: -2
+        harmony: -3
         law: 1
         morality: -2
   - summary: "[color=red]Reddit[/color] has [b]decided[/b] you're the asshole. How do you respond?"
