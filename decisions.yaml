@@ -1,4 +1,3 @@
-# Maximum of 3 changes to values per option in each decision 
 decisions:
   - summary: "You come across a [b]very[/b] kickable [color=red]cat[/color]"
     option_a:
